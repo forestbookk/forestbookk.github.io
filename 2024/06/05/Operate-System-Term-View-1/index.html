@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="Planting Tree" />
+  <meta name="keyword" content="Coding, Dancing, Enjoying" />
+  <link rel="shortcut icon" href="/img/ironman-draw.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+     OS Term Review (1) - Shae&#39;s Blog 
+  </title>
+
+  <link
+    rel="canonical"
+    href="https://forestbookk.github.io/2024/06/05/Operate-System-Term-View-1/"
+  />
+
+  <!-- Bootstrap Core CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+  <!-- Custom CSS -->
+   
+<link rel="stylesheet" href="/css/dusign-light.css">
+ 
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+ 
+<link rel="stylesheet" href="/css/font-awesome.css">
+ 
+<link rel="stylesheet" href="/css/toc.css">
+
+  <!-- background effects end -->
+  
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="/css/highlight.css">
+ 
+<link rel="stylesheet" href="/css/widget.css">
+ 
+<link rel="stylesheet" href="/css/rocket.css">
+
+  
+<link rel="stylesheet" href="/css/signature.css">
+ 
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
+
+  <!-- photography -->
+  
+<link rel="stylesheet" href="/css/photography.css">
+
+
+  <!-- ga & ba script hoook -->
+  <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bg.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/bear.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#review" title="review">review</a>
+                            
+                        </div>
+                        <h1>OS Term Review (1)</h1>
+                        <h2 class="subheading">2023-2024 Spring Operate System</h2>
+                        <span class="meta">
+                            Posted by forestbookk on
+                            2024-06-05
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">7.1k</span> and
+                                Reading Time <span class="post-count">24</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">森林书</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                    <li>
+                        <a href="YOUR_CHINESE_BLOG_URL" target="_blank">Chinese Blog</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>框架来源：各老师的复习PPT。内容主要来源于shl老师的PPT。需要注意的是，应试应看遍所有老师的PPT的细节（比如I/O四个软件层的具体举例似乎只有wty老师写了）。</p>
+<p>事实上，在后续做题和复习中，笔者又添加了很多内容，暂时没有空整理。在这立一个🚩。</p>
+<h1 id="考纲"><a href="#考纲" class="headerlink" title="考纲"></a>考纲</h1><ul>
+<li><p>了解操作系统<strong>各个组成部分</strong>的基本结构和原理</p>
+</li>
+<li><p><strong>掌握</strong>在<strong>进程管理</strong>、<strong>存储管理</strong>、<strong>设备管理</strong>、<strong>磁盘管理</strong>及<strong>文件管理</strong>等涉及的概念和相关算法</p>
+</li>
+</ul>
+<h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><h2 id="冯·诺伊曼体系结构"><a href="#冯·诺伊曼体系结构" class="headerlink" title="冯·诺伊曼体系结构"></a>冯·诺伊曼体系结构</h2><p>存储程序式，集中顺序过程控制</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>中央处理单元</li>
+<li>存储器</li>
+<li>输入输出</li>
+</ul>
+<h3 id="架构局限"><a href="#架构局限" class="headerlink" title="架构局限"></a>架构局限</h3><p>§ CPU与内存的交互引起的内存墙问题</p>
+<p>§ 数据与指令不区分，指令等数据或数据等指令</p>
+<p>§ 串行顺序处理，缺乏数据并行能力</p>
+<h2 id="操作系统的发展变化"><a href="#操作系统的发展变化" class="headerlink" title="操作系统的发展变化"></a>操作系统的发展变化</h2><h3 id="批处理系统"><a href="#批处理系统" class="headerlink" title="批处理系统"></a>批处理系统</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>加载在计算机上的一个系统软件，在它的控制下，计算机能够自动地、成批地处理一个或多个用户的作业（这作业包括程序、数据和命令）。</p>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
+<li><p>联机批处理系统：即作业的输入/输出由CPU来处理。出现“忙等”。</p>
+</li>
+<li><p>脱机批处理系统：为克服与缓解高速主机与慢速外设的矛盾，提高CPU的利用率，又引入了脱机批处理系统，即输入/输出脱离主机控制</p>
+</li>
+</ul>
+<h3 id="多道程序系统"><a href="#多道程序系统" class="headerlink" title="多道程序系统"></a>多道程序系统</h3><p>不仅使CPU得到充分利用，同时也改善I/O设备和内存的利用率，从而提高了整个系统的资源利用率和系统吞吐量（即单位时间内处理作业（程序）的个数），最终提高了整个系统的效率。</p>
+<p>标志着操作系统渐趋成熟的阶段，先后出现了作业调度管理、处理机管理、存储器管理、外部设备管理、文件系统管理等功能。</p>
+<p><strong>特点：</strong></p>
+<ol>
+<li>多道</li>
+<li>宏观上并行</li>
+<li>微观上串行</li>
+</ol>
+<p><strong>优点：</strong></p>
+<ul>
+<li>系统吞吐量大</li>
+<li>资源利用率高</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>平均周转时间长</li>
+<li>不能提供交互能力</li>
+</ul>
+<h3 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>多个用户分享使用同一台计算机。多个程序分时共享硬件和软件资源。</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>多路性</li>
+<li>独立性：用户相互不打扰</li>
+<li>及时性：响应时间</li>
+<li>交互性：人机对话</li>
+</ul>
+<h3 id="实时、网络、分布式"><a href="#实时、网络、分布式" class="headerlink" title="实时、网络、分布式"></a>实时、网络、分布式</h3><h4 id="实时"><a href="#实时" class="headerlink" title="实时"></a>实时</h4><p>• 及时响应</p>
+<p>• 高可靠性和安全性</p>
+<p>• 系统的整体性强</p>
+<p>• 交互会话活动较弱</p>
+<p>• 专用系统</p>
+<p>• 种类：实时信息处理、实时控制</p>
+<h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><p>联网功能，资源的远程访问</p>
+<h4 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h4><p>定义：在整个系统中有一个<strong>全局</strong>的操作系统</p>
+<p>多台机器统一管理形成<strong>单一系统</strong>，相比网络，对用户和应用高度<strong>透明</strong>。具有多级合作和健壮性。</p>
+<ul>
+<li>数据透明</li>
+<li>执行透明</li>
+<li>保护透明</li>
+</ul>
+<h2 id="操作系统的主要功能"><a href="#操作系统的主要功能" class="headerlink" title="操作系统的主要功能"></a>操作系统的主要功能</h2><p>• 提供<strong>解决各种冲突</strong>（资源竞争引起）的策略</p>
+<p>– 处理机调度、进程调度、内存分配、设备分配等</p>
+<p>• <strong>协调并发活动</strong>的关系（提供流程控制和避免运行</p>
+<p>结果不确定性）</p>
+<p>– 进程之间的通信，同步与互斥</p>
+<p>• <strong>保证数据的一致性</strong></p>
+<p>– 读写数据时，数据结构中的内容是否真实地记录了数</p>
+<p>据的实际情况</p>
+<p>– 在分布式处理时的共享数据的不同副本是否一致</p>
+<p>• 实现<strong>数据的存取控制</strong></p>
+<p>– 共享程度、隐私程度、安全程度的控制</p>
+<h3 id="进程管理（处理机分配）"><a href="#进程管理（处理机分配）" class="headerlink" title="进程管理（处理机分配）"></a>进程管理（处理机分配）</h3><h4 id="核心任务：如何分配CPU时间"><a href="#核心任务：如何分配CPU时间" class="headerlink" title="核心任务：如何分配CPU时间"></a>核心任务：如何分配CPU时间</h4><ul>
+<li>进程管理<ul>
+<li>进程的调度：创建、挂起、激活</li>
+<li>进程间的通信：同步、互斥、死锁</li>
+</ul>
+</li>
+<li>线程管理</li>
+</ul>
+<h4 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h4><ul>
+<li>公平分配</li>
+<li>保证非阻塞</li>
+<li>按优先级分配</li>
+</ul>
+<h3 id="存储管理"><a href="#存储管理" class="headerlink" title="存储管理"></a>存储管理</h3><h4 id="核心任务"><a href="#核心任务" class="headerlink" title="核心任务"></a>核心任务</h4><p>管理缓存、主存、磁盘等所形成的多级存储架构，为多道程序的并发提供良好的环境</p>
+<h4 id="主要功能-1"><a href="#主要功能-1" class="headerlink" title="主要功能"></a>主要功能</h4><ul>
+<li>内存分配和存储无关性</li>
+<li>内存保护：互不干扰</li>
+<li>内存扩充：虚拟存储器</li>
+</ul>
+<h3 id="设备管理（包括磁盘管理）"><a href="#设备管理（包括磁盘管理）" class="headerlink" title="设备管理（包括磁盘管理）"></a>设备管理（包括磁盘管理）</h3><h4 id="核心任务-1"><a href="#核心任务-1" class="headerlink" title="核心任务"></a>核心任务</h4><p>管理输入/输出设备，屏蔽差异性，提供并发访问</p>
+<h4 id="主要功能-2"><a href="#主要功能-2" class="headerlink" title="主要功能"></a>主要功能</h4><ul>
+<li><p>设备无关性：逻辑设备-&gt;物理设备</p>
+</li>
+<li><p>设备分配：独享、共享和虚拟</p>
+</li>
+<li><p>设备的传输控制：<strong>中断</strong>、<strong>通道</strong></p>
+</li>
+</ul>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><h4 id="核心任务-2"><a href="#核心任务-2" class="headerlink" title="核心任务"></a>核心任务</h4><p>将磁盘变成一个很容易使用的存储媒介提供给用户使用</p>
+<h4 id="主要功能-3"><a href="#主要功能-3" class="headerlink" title="主要功能"></a>主要功能</h4><ul>
+<li>文件存储空间的管理</li>
+<li>目录管理</li>
+<li>文件读写管理</li>
+<li>文件保护</li>
+<li>向用户提供接口</li>
+</ul>
+<h3 id="接口管理"><a href="#接口管理" class="headerlink" title="接口管理"></a>接口管理</h3><h4 id="程序接口"><a href="#程序接口" class="headerlink" title="程序接口"></a>程序接口</h4><p>系统调用</p>
+<h4 id="用户接口"><a href="#用户接口" class="headerlink" title="用户接口"></a>用户接口</h4><p>联机用户接口</p>
+<p>脱机用户接口</p>
+<p>图形用户接口</p>
+<h2 id="现代操作系统的基本特征"><a href="#现代操作系统的基本特征" class="headerlink" title="现代操作系统的基本特征"></a>现代操作系统的基本特征</h2><ul>
+<li><p><strong>并发</strong>执行</p>
+</li>
+<li><p>资源<strong>共享</strong></p>
+</li>
+<li><p><strong>虚拟化</strong>管理：CPU, 存储器</p>
+</li>
+<li><p><strong>异步性</strong>不确定性事件的处理）</p>
+</li>
+</ul>
+<h2 id="操作系统的工作模式"><a href="#操作系统的工作模式" class="headerlink" title="操作系统的工作模式"></a>操作系统的工作模式</h2><h3 id="内核态-管态"><a href="#内核态-管态" class="headerlink" title="内核态/管态"></a>内核态/管态</h3><p>运行操作系统程序</p>
+<h3 id="用户态-目态"><a href="#用户态-目态" class="headerlink" title="用户态/目态"></a>用户态/目态</h3><p>运行用户程序</p>
+<h3 id="切换过程？"><a href="#切换过程？" class="headerlink" title="切换过程？"></a>切换过程？</h3><p>内核与应用使用不同的页表。用户态无法直接寻址内核空间的数据。因此需要切换。</p>
+<p>用户态—&gt;内核态：中断/异常/陷入机制</p>
+<p>内核态—&gt;用户态：设置程序状态字PSW（MIPS的CP0寄存器）</p>
+<h3 id="几个术语"><a href="#几个术语" class="headerlink" title="几个术语"></a>几个术语</h3><h4 id="特权指令-保护指令"><a href="#特权指令-保护指令" class="headerlink" title="特权指令/保护指令"></a>特权指令/保护指令</h4><p>只能由操作系统使用、用户程序不能使用的指令</p>
+<h4 id="异常：中断、陷入（作用、区别？）（系统调用过程）"><a href="#异常：中断、陷入（作用、区别？）（系统调用过程）" class="headerlink" title="异常：中断、陷入（作用、区别？）（系统调用过程）"></a>异常：中断、陷入（作用、区别？）（系统调用过程）</h4><p><img src="image-20240603141523948.png" alt="image-20240603141523948"></p>
+<h4 id="系统调用的概念"><a href="#系统调用的概念" class="headerlink" title="系统调用的概念"></a>系统调用的概念</h4><p>系统调用提供用户程序与操作系统之间的接口，唯一接口使CPU状态从用户态陷入内核态</p>
+<h3 id="系统调用和函数调用的区别"><a href="#系统调用和函数调用的区别" class="headerlink" title="系统调用和函数调用的区别"></a>系统调用和函数调用的区别</h3><p><img src="image-20240603144212316.png" alt="image-20240603144212316"></p>
+<h4 id="用户态程序如何访问系统功能，描述过程，如何切换入内核态执行"><a href="#用户态程序如何访问系统功能，描述过程，如何切换入内核态执行" class="headerlink" title="用户态程序如何访问系统功能，描述过程，如何切换入内核态执行"></a>用户态程序如何访问系统功能，描述过程，如何切换入内核态执行</h4><ol>
+<li>CPU执行<code>int 0x2e</code>，CPU运行状态切换为系统态</li>
+<li><p>当前进程使用的堆栈，从用户态切换到系统态。堆栈原先的内容（用户态），以及用户空间的堆栈指针，被压入系统空间堆栈。</p>
+</li>
+<li><p>从中断向量表中(<code>InterruptDescriptor Table</code>)以<code>0x2e</code>为中断向量，开始执行系统空间中的程序。</p>
+</li>
+<li><p>程序执行后，通过<code>iret</code>(中断返回)指令实现上述过程的逆过程</p>
+</li>
+</ol>
+<blockquote>
+<p>当CPU执行到特殊的陷入指令时</p>
+<p>§ 中断/异常机制：硬件保护现场；通过查中断向量表把控制权转给系统调用总入口程序</p>
+<p>§ 系统调用总入口程序：保存现场；将参数保存在内核堆栈里；通过查系统调用表把控制权转给相应的系统调用处理例程或内核函数</p>
+<p>§ 执行系统调用例程</p>
+<p>§ 恢复现场，返回用户程序</p>
+</blockquote>
+<h2 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h2><h3 id="计算机体系结构中的接口"><a href="#计算机体系结构中的接口" class="headerlink" title="计算机体系结构中的接口"></a>计算机体系结构中的接口</h3><ul>
+<li>UI</li>
+<li>API: API 定义了源代码和库之间的接口，因此同样的代码可以在支持这个 API 的任何系统中<strong>编译</strong> 。</li>
+<li>ABI: 应用程序二进制接口, ABI 允许编译好的目标代码在使用兼容 ABI 的系统中无需改动就能<strong>运行</strong>。(2024期中三3)</li>
+<li>ISA: ISA充当软件和硬件之间的接口，为ISA编写的软件可以在同一ISA的不同实现上运行。这使得可以轻松实现不同代计算机之间的二进制兼容性以及计算机家族的发展。</li>
+</ul>
+<p><img src="接口.png" alt=""></p>
+<h3 id="什么是操作系统内核？如何进入？"><a href="#什么是操作系统内核？如何进入？" class="headerlink" title="什么是操作系统内核？如何进入？"></a>什么是操作系统内核？如何进入？</h3><h3 id="微内核、整体内核（宏内核）"><a href="#微内核、整体内核（宏内核）" class="headerlink" title="微内核、整体内核（宏内核）"></a>微内核、整体内核（宏内核）</h3><h4 id="辨析"><a href="#辨析" class="headerlink" title="辨析"></a>辨析</h4><p>宏内核：<strong>整个系统分为内核与应用两层</strong></p>
+<p>• 内核：运行在特权级，集中控制所有计算资源</p>
+<p>• 应用：运行在非特权级，受内核管理，使用内核服务</p>
+<p>微内核：内核中只包括中断处理、进程通信（IPC）、基本调度等。文件系统、网络功能、内存管理、设备管理等作为服务在微内核上运行。<strong>设计原则：最小化内核功能</strong></p>
+<p>• 将操作系统功能移到用户态，称为服务（Server）</p>
+<p>• 在用户模块之间，使用消息传递机制通信</p>
+<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>对<strong>宏内核</strong>而言</p>
+<ul>
+<li>优点：宏内核拥有丰富的沉淀和积累<ul>
+<li>拥有巨大的统一的社区和生态</li>
+<li>针对不同场景优化了30年</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>安全性与可靠性问题：模块之间没有很强的隔离机制</li>
+<li>实时性支持：系统太复杂导致无法做最坏情况时延分析</li>
+<li>系统过于庞大而阻碍了创新：Linux代码行数已经过2千万</li>
+</ul>
+</li>
+</ul>
+<p>对<strong>微内核</strong>而言</p>
+<ul>
+<li>优点：内核易于实现、可移植性好、配置灵活、适应分布式环境（本地内核与远程内核对服务提供同样支持）、安全性高</li>
+<li>缺点：速度较慢。（扩大内核减少切换；减少内核提高其他优点）</li>
+</ul>
+<blockquote>
+<p>完整版：</p>
+<p>§ <strong>优点</strong></p>
+<p>• 易于扩展：直接添加一个用户进程即可为操作系统增加服务</p>
+<p>• 易于移植：大部分模块与底层硬件无关</p>
+<p>• 更加可靠：在内核模式运行的代码量大大减少</p>
+<p>• 更加安全：即使存在漏洞，服务与服务之间存在进程粒度隔离</p>
+<p>• 更加健壮：单个模块出现问题不会影响到系统整体</p>
+<p>§ <strong>缺点</strong></p>
+<p>• 性能较差：内核中的模块交互由函数调用变成了进程间通信</p>
+<p>• 生态欠缺：尚未形成像Linux一样具有广泛开发者的社区</p>
+<p>• 重用问题：重用宏内核操作系统提供兼容性，带来新问题</p>
+</blockquote>
+<h1 id="操作系统引导"><a href="#操作系统引导" class="headerlink" title="操作系统引导"></a>操作系统引导</h1><h2 id="OS分阶段引导过程"><a href="#OS分阶段引导过程" class="headerlink" title="OS分阶段引导过程"></a>OS分阶段引导过程</h2><ul>
+<li><p>CPU通电启动或者Reset时，CPU从一个预定义的内存位置开始执行bootloader</p>
+</li>
+<li><p>bootloader程序一般存储于ROM只读存储器，因为RAM在系统启动时处于未知状态，而ROM它不需要初始化，也不容易被计算机病毒感染</p>
+<blockquote>
+<p>Bootloader需要正确地找到内核并加载执行，大部分分为stage1和stage2两个部分</p>
+<p>§ <strong>Stage 1</strong></p>
+<p>• 依赖于CPU体系结构的代码（如设备初始化代码等）通常都放在stage1且可以用汇编语言来实现</p>
+<p>• 需要初始化硬件设备，包括 watchdog timer、中断、时钟、内存等</p>
+<p>• bootloader 程序直接从非易失存储器上（比如 ROM 或 FLASH）加载，为加载 stage2 准备 RAM 空间</p>
+<p>§ <strong>Stage 2</strong></p>
+<p>• 通常用C语言来实现，可实现复杂功能，更好的可读性和移植性</p>
+<p>• 初始化这一阶段需要使用的硬件设备以及其他功能</p>
+<p>• 将内核镜像从存储器读到 RAM 中，并为内核设置启动参数</p>
+<p>• 将 CPU 指令寄存器的内容设置为内核入口函数的地址，即可将控制权从 bootloader 转交给操作系统内核</p>
+</blockquote>
+</li>
+<li><p>通过bootloader，我们可以初始化硬件设备、建立内存空间的映射表，从而建立适当的系统软硬件环境，为最终调用操作系统内核做好准备</p>
+</li>
+</ul>
+<h2 id="各个阶段的职责"><a href="#各个阶段的职责" class="headerlink" title="各个阶段的职责"></a>各个阶段的职责</h2><ol>
+<li><p>加载BIOS。BIOS中包含了CPU的相关信息、设备启动顺序信息、硬盘信息、内存信息、时钟信息、PnP特性等等。在此之后，计算机心里就有谱了，知道应该去读取哪个硬件设备了。</p>
+<blockquote>
+<p>UEFI和BIOS的比较</p>
+<p>二者显著的区别是：</p>
+<p>§ EFI是用模块化，C语言风格的参数堆栈传递方式，动态链接的形式构建的系统，较BIOS而言更易于实现，容错和纠错特性更强，缩短了系统研发的时间。</p>
+<p>§ 它运行于32位或64位模式，乃至未来增强的处理器模式下，突破传统BIOS的16位代码的寻址能力，达到处理器的最大寻址。</p>
+</blockquote>
+</li>
+<li><p>读取MBR。硬盘上第0磁头第0磁道第1个扇区被称为MBR，即主引导记录，它的大小是512字节，存放了预启动信息、分区表信息。</p>
+<ul>
+<li>由于MBR的限制 只能有4个主分区，系统必须装在主分区上面。</li>
+<li>硬盘分区有三种，主磁盘分区、扩展磁盘分区、逻辑分区。</li>
+<li>一个硬盘主分区至少有1个，最多4个，扩展分区可以没有，最多1个。且主分区+扩展分区总共不能超过4个。逻辑分区可以有若干个。</li>
+<li>主分区只能有一个是激活的（active），其余为inactive。</li>
+</ul>
+<blockquote>
+<p>MBR组成：</p>
+<p>§ MBR主引导记录包含两部分的内容，前446字节为启动代码及数据</p>
+<p>§ 之后则是分区表（DPT, Disk Partition Table），分区表由四个分区项组成，每个分区项数据为16字节，记录了启动时需要的分区参数。这64个字节分布在MBR的第447-510字节</p>
+<p>§ 后面紧接着两个字节AA和55被称为幻数, BOIS读取MBR的时候总是检查最后是不是有这两个幻数，如果没有就被认为是一个没有被分区的硬盘。</p>
+</blockquote>
+</li>
+<li><p><strong>Boot Loader</strong></p>
+<p>§ LILO 没有交互式命令界面，而 GRUB 拥有。</p>
+<p>§ LILO 不支持网络引导，而 GRUB 支持。</p>
+<p>§ LILO 将关于可以引导的操作系统位置的信息物理上存储在 MBR 中。如果修改了 LILO 配置文件，必须将 LILO 第一阶段引导加载程序重写到 MBR。错误配置的 MBR 可能会让系统无法引导。</p>
+<p>§ 使用 GRUB，如果配置文件配置错误，则只是默认转到 GRUB 命令行界面。</p>
+</li>
+</ol>
+<h2 id="各个阶段引导程序的存储与装载过程"><a href="#各个阶段引导程序的存储与装载过程" class="headerlink" title="各个阶段引导程序的存储与装载过程"></a>各个阶段引导程序的存储与装载过程</h2><p>程序的链接与装载：<strong>编译</strong>-<strong>链接</strong>-<strong>装载</strong>-<strong>执行</strong></p>
+<p>程序一般由3个段组成，除此之外还需构建一个栈，一个堆：</p>
+<ul>
+<li>bss段：未初始化的全局变量、static声明的变量，静态内存分配。<strong>不</strong>在可执行文件中，由系统初始化。</li>
+<li>data段：已初始化的全局变量、static声明的变量，静态内存分配。在可执行文件中。</li>
+<li>text段：用来存放程序执行代码的一块内存区域，可能包含一些只读的常数变量，例如字符串常量。在可执行文件中。</li>
+<li>栈（stack）：存放、交换临时数据的内存区。存放程序局部变量（<strong>但不</strong>包括static声明的变量，static意味着在数据段中存放变量）</li>
+<li>堆（heap）：动态分配的内存段，当进程调用malloc等函数，新分配的内存就被动态添加到堆上。</li>
+</ul>
+<h3 id="程序的装载细节"><a href="#程序的装载细节" class="headerlink" title="程序的装载细节"></a>程序的装载细节</h3><p>一个segment在文件中的大小是<strong>小于等于</strong>其在内存中的大小。如果在文件中的大小小于在内存应有的大小，载入时会<strong>补零</strong>直至应有的大小。</p>
+<h2 id="简述Linux内核在x86平台上的加载过程"><a href="#简述Linux内核在x86平台上的加载过程" class="headerlink" title="简述Linux内核在x86平台上的加载过程"></a>简述Linux内核在x86平台上的加载过程</h2><h1 id="存储管理-1"><a href="#存储管理-1" class="headerlink" title="存储管理"></a>存储管理</h1><h2 id="存储管理的功能"><a href="#存储管理的功能" class="headerlink" title="存储管理的功能"></a>存储管理的功能</h2><h3 id="内存的分配与回收"><a href="#内存的分配与回收" class="headerlink" title="内存的分配与回收"></a>内存的分配与回收</h3><h3 id="存储保护"><a href="#存储保护" class="headerlink" title="存储保护"></a>存储保护</h3><h3 id="地址转换"><a href="#地址转换" class="headerlink" title="地址转换"></a>地址转换</h3><h3 id="静态重定位"><a href="#静态重定位" class="headerlink" title="静态重定位"></a>静态重定位</h3><p>• 当用户程序加载到内存时，一次性实现逻辑地址到物理地址的转换</p>
+<p>• 一般可以由软件完成</p>
+<h3 id="动态重定位"><a href="#动态重定位" class="headerlink" title="动态重定位"></a>动态重定位</h3><p>• 在进程执行过程中进行地址变换，<strong>即逐条指令执行时完成地址转换</strong></p>
+<p>• 需要硬件部件支持</p>
+<h3 id="存储共享"><a href="#存储共享" class="headerlink" title="存储共享"></a>存储共享</h3><h3 id="扩充内存容量"><a href="#扩充内存容量" class="headerlink" title="扩充内存容量"></a>扩充内存容量</h3><h2 id="分区存储管理"><a href="#分区存储管理" class="headerlink" title="分区存储管理"></a>分区存储管理</h2><h3 id="固定分区"><a href="#固定分区" class="headerlink" title="固定分区"></a>固定分区</h3><h4 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4><p>采用的数据结构：分区表记录分区的大小和使用情况</p>
+<h4 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h4><p><strong>§ 优点</strong></p>
+<p>• 易于实现，开销小</p>
+<p><strong>§ 缺点</strong></p>
+<p>• 内部碎片，造成空间浪费</p>
+<blockquote>
+<h5 id="碎片"><a href="#碎片" class="headerlink" title="碎片"></a>碎片</h5><h6 id="内部碎片"><a href="#内部碎片" class="headerlink" title="内部碎片"></a>内部碎片</h6><p>分配大小大于实际使用</p>
+<h6 id="外部碎片"><a href="#外部碎片" class="headerlink" title="外部碎片"></a>外部碎片</h6><p>空闲的但不连续，无法被使用，<strong>外部碎片才是造成内存系统性能下降的主要原因</strong>。</p>
+<h6 id="如何消除内部碎片和外部碎片"><a href="#如何消除内部碎片和外部碎片" class="headerlink" title="如何消除内部碎片和外部碎片"></a>如何消除内部碎片和外部碎片</h6><ul>
+<li><p>伙伴系统</p>
+<p>介于固定分区与可变分区之间，其大小均为$2^{k}$。</p>
+</li>
+<li><p>紧凑技术</p>
+<p>通过移动作业从把多个分散的小分区拼接成一个大分区的方法称为紧凑（拼接或紧缩） 。</p>
+<p><strong>实现支撑</strong>：动态重定位。</p>
+</li>
+<li><p>段/页式内存管理</p>
+</li>
+</ul>
+</blockquote>
+<p>• 分区总数固定，限制了并发执行的程序数目</p>
+<h3 id="可变分区"><a href="#可变分区" class="headerlink" title="可变分区"></a>可变分区</h3><h4 id="基本思想-1"><a href="#基本思想-1" class="headerlink" title="基本思想"></a>基本思想</h4><p>• 根据作业的实际需要，动态地为之分配内存空间</p>
+<p>• 划分的时间、大小、位置都是动态的</p>
+<h4 id="优缺点-2"><a href="#优缺点-2" class="headerlink" title="优缺点"></a>优缺点</h4><p>§ <strong>优点</strong></p>
+<p>• 没有内碎片</p>
+<p>• 克服固定分区内存资源的浪费问题，有利于多道程序设计，提高内存资源利用率</p>
+<h4 id="动态分配数据结构"><a href="#动态分配数据结构" class="headerlink" title="动态分配数据结构"></a>动态分配数据结构</h4><ul>
+<li><p>位图表示法（分区表）：给每个分配单元赋予一个字位，用来记录该分配单元是否闲置。例如，字位取值为0表示单元闲置，取值为1则表示已被占用</p>
+<p>• 空间成本固定：不依赖于内存中的程序数量</p>
+<p>• 时间成本低：操作简单，直接修改其位图值即可</p>
+<p>• 没有容错能力：如果一个分配单元为1，不能肯定应该为1还是因错误变成1</p>
+</li>
+<li><p>链表表示法（分区链表）：将分配单元按照是否闲置链接起来，这种方法称为链表表示法。如上图所示的的位图所表示的内存分配状态</p>
+<p>• 空间成本：取决于程序的数量</p>
+<p>• 时间成本：链表扫描通常速度较慢，还要进行链表项的插入、删除和修改</p>
+<p>• 有一定容错能力：因为链表有被占空间和闲置空间的表项，可以相互验证</p>
+<p><img src="image-20240603214450192.png" alt="image-20240603214450192"></p>
+</li>
+</ul>
+<h4 id="主要算法"><a href="#主要算法" class="headerlink" title="主要算法"></a>主要算法</h4><h5 id="BestFit"><a href="#BestFit" class="headerlink" title="BestFit"></a>BestFit</h5><p>往往使剩下的空闲区非常小，从而在存储器中留下许多难以利用的小空闲区</p>
+<h5 id="WorstFit"><a href="#WorstFit" class="headerlink" title="WorstFit"></a>WorstFit</h5><p>大作业存储空间的申请往往会得不到满足</p>
+<h5 id="FirstFit"><a href="#FirstFit" class="headerlink" title="FirstFit"></a>FirstFit</h5><ul>
+<li><strong>优点：</strong></li>
+</ul>
+<p>• 分配和释放的时间性能较好</p>
+<p>• 较大的空闲分区保留在内存的高端</p>
+<ul>
+<li><strong>缺点：</strong></li>
+</ul>
+<p>• 随着低端内存被不断分配，会产生很多小分区，开销会增大</p>
+<h5 id="NextFit"><a href="#NextFit" class="headerlink" title="NextFit"></a>NextFit</h5><p>使存储空间的利用更加均衡，不致使小的空闲区集中在存储区的一端，但这会导致缺乏大的空闲分区</p>
+<h3 id="覆盖与交换"><a href="#覆盖与交换" class="headerlink" title="覆盖与交换"></a>覆盖与交换</h3><p>覆盖与交换技术是在多道程序环境下用来扩充内存的两种方法，可以解决在小的内存空间运行大作业的问题。</p>
+<h4 id="覆盖"><a href="#覆盖" class="headerlink" title="覆盖"></a>覆盖</h4><p>定义：把<strong>一个程序</strong>划分为一系列功能相对独立的程序段，让执行时不要求同时装入内存的程序段组成一组（称为覆盖段），共享主存的同一个区域。</p>
+<p>原理：程序段先保存在磁盘上，当有关程序段的前一部分执行结束，把后续程序段调入内存，覆盖前面的程序段。</p>
+<p>要求：作业各模块之间有明确的调用结构，程序员要向系统指明覆盖结构，然后由操作系统完成自动覆盖。</p>
+<p>缺点：对用户不透明，增加了用户负担。</p>
+<h4 id="交换"><a href="#交换" class="headerlink" title="交换"></a>交换</h4><p>定义：把暂时不用的某个（或某些）程序及其数据的部分或全部从主存移到辅存中去，以便腾出必要的存储空间；接着把指定程序或数据从辅存读到相应的主存中，并将控制转给它，让其在系统中运行。</p>
+<p>优点：增加并发运行的程序数目，并且给用户提供适当的响应时间；编写程序时不影响程序结构。</p>
+<p>缺点：对换入和换出的控制增加处理机开销；程序整个地址空间都进行传送，没有考虑执行过程中地址访问的统计特性。</p>
+<p>选择原则：等待I/O的进程。</p>
+<p>交换时机的确定：只要不用就换出；只在内存空间不够或有不够的危险时换出。</p>
+<h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><p>§ 覆盖可减少一个程序运行所需的空间。交换可让整个程序暂存于外存中，让出内存空间</p>
+<p>§ 覆盖是由程序员实现的，操作系统根据程序员提供的覆盖结构来完成程序段之间的覆盖。交换技术不要求程序员给出程序段之间的覆盖结构</p>
+<p>§ 覆盖技术主要对<strong>同一个作业或程序</strong>进行。交换主要在作业或程序间之间进行</p>
+<h2 id="页式存储管理"><a href="#页式存储管理" class="headerlink" title="页式存储管理"></a>页式存储管理</h2><p>主要目的：<strong>提高内存空间利用率</strong>。页面与源程序<strong>不存在逻辑关系</strong>。</p>
+<h3 id="页面、页框"><a href="#页面、页框" class="headerlink" title="页面、页框"></a>页面、页框</h3><ul>
+<li>页/页面：在分页存储管理系统中，把每个作业的地址空间分成一些<strong>大小相等的片</strong></li>
+<li>存储块/页框：把主存的存储空间分成与<strong>页面相同大小的片</strong></li>
+</ul>
+<h3 id="地址转换-1"><a href="#地址转换-1" class="headerlink" title="地址转换"></a>地址转换</h3><p>CPU地址划分为：虚拟页号+页内偏移。</p>
+<p>如果逻辑地址空间为$2^m$，且页大小为$2^n$单元，那么逻辑地址的高m-n位表示页号（页表的索引），而低n位表示页偏移。</p>
+<h4 id="MMU"><a href="#MMU" class="headerlink" title="MMU"></a>MMU</h4><h4 id="页表"><a href="#页表" class="headerlink" title="页表"></a>页表</h4><p>包含多个页表项，存储虚拟页到物理页的映射</p>
+<h5 id="多级页表"><a href="#多级页表" class="headerlink" title="多级页表"></a>多级页表</h5><h5 id="杂凑页表"><a href="#杂凑页表" class="headerlink" title="杂凑页表"></a>杂凑页表</h5><h5 id="反置页表"><a href="#反置页表" class="headerlink" title="反置页表"></a>反置页表</h5><p>不是依据进程的逻辑页号来组织，而是依据该进程在内存中的物理页面号来组织（即：<strong>按物理页面号排列</strong>），其表项的内容是逻辑页号 P 及隶属进程标志符 pid</p>
+<p>大小只与物理内存的大小相关，<strong>优点：页表占用的内存空间小</strong></p>
+<h4 id="快表TLB"><a href="#快表TLB" class="headerlink" title="快表TLB"></a>快表TLB</h4><p>一种特殊的高速缓冲存储器（Cache） ，内容是页表中的一部分或全部内容。</p>
+<p>CPU 产生逻辑地址的页号，首先在快表中寻找，若命中就找出其对应的物理块；若未命中，再到页表中找其对应的物理块，并将之复制到快表。若快表中内容满，则按某种算法淘汰某些页</p>
+<h4 id="页面的大小"><a href="#页面的大小" class="headerlink" title="页面的大小"></a>页面的大小</h4><p>最常用的页面大小为$4KB$。</p>
+<p><strong>若页面较小</strong></p>
+<p>• 减少页内碎片和总的内存碎片，有利于提高内存利用率。</p>
+<p>• 每个进程页面数增多，使页表长度增加，占用内存较大。</p>
+<p>• 页面换进换出速度将降低。</p>
+<p><strong>若页面较大</strong></p>
+<p>• 每个进程页面数减少，页表长度减少，占用内存较小。</p>
+<p>• 页面换进换出速度将提高。</p>
+<p>• 增加页内碎片，不利于提高内存利用率</p>
+<h3 id="自映射"><a href="#自映射" class="headerlink" title="自映射"></a>自映射</h3><p>页目录表基址 $PD_{base}$:</p>
+<p>$PD<em>{base}=PT</em>{base}|(PT_{base})&gt;&gt;10$</p>
+<p>自映射目录表项$PDE_{self-mapping}$:</p>
+<p>$PDE<em>{self-mapping}=PT</em>{base}|(PT<em>{base})&gt;&gt;10|(PT</em>{base})&gt;&gt;20$</p>
+<h2 id="段式存储管理"><a href="#段式存储管理" class="headerlink" title="段式存储管理"></a>段式存储管理</h2><h3 id="基本思想-2"><a href="#基本思想-2" class="headerlink" title="基本思想"></a>基本思想</h3><p>主要是<strong>满足用户（程序员）编程和使用要求</strong>。程序更多采用分段结构，源程序经编译或汇编后，仍按照<strong>自身逻辑关系分为若干段</strong>。段之间的地址不一定连续，而段内地址一定连续。</p>
+<ul>
+<li>方便编程</li>
+<li>信息共享</li>
+<li>信息保护</li>
+<li>动态增长</li>
+<li>动态链接</li>
+</ul>
+<h3 id="地址变换"><a href="#地址变换" class="headerlink" title="地址变换"></a>地址变换</h3><p><strong>二维地址结构（段号：段内地址）</strong>。</p>
+<p>这种地址结构需要编译程序的支持，但对程序员而言是透明的。</p>
+<h3 id="分页与分段的比较（辨析异同）"><a href="#分页与分段的比较（辨析异同）" class="headerlink" title="分页与分段的比较（辨析异同）"></a>分页与分段的比较（辨析异同）</h3><p><img src="image-20240603223443185.png" alt="image-20240603223443185"></p>
+<ul>
+<li><p>优点</p>
+<p>分段系统易于实现段的共享，对段的保护也十分简单</p>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>处理机要为地址变换花费时间；要为表格提供附加的存储空间</li>
+<li>为满足分段的动态增长和减少外零头，要采用拼接手段。</li>
+<li>在辅存中管理不定长度的分段困难较多</li>
+<li>分段的最大尺寸受到主存可用空间的限制</li>
+</ul>
+</li>
+</ul>
+<h3 id="段页式内存管理"><a href="#段页式内存管理" class="headerlink" title="段页式内存管理"></a>段页式内存管理</h3><h4 id="基本思想-3"><a href="#基本思想-3" class="headerlink" title="基本思想"></a>基本思想</h4><p>用分段方法来分配和管理虚拟存储器，而用分页方法来分配和管理实存储器。</p>
+<h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><ul>
+<li><p>段页式存储管理是分段和分页原理的结合，即先将用户程序分成若干个段（段式） ，并为每一个段赋一个段名，再把每个段分成若干个页（页式） 。</p>
+</li>
+<li><p>其地址结构由段号、段内页号、及页内位移三部分所组成。</p>
+</li>
+<li>设段表和页表，均存放于内存中，读一字节的指令或数据须访问内存三次。每个进程一张段表，每个段一张页表。</li>
+</ul>
+<h2 id="虚拟存储：原理与算法"><a href="#虚拟存储：原理与算法" class="headerlink" title="虚拟存储：原理与算法"></a>虚拟存储：原理与算法</h2><p>自动实现部分装入和部分对装。</p>
+<h3 id="内存访问的局部性原理"><a href="#内存访问的局部性原理" class="headerlink" title="内存访问的局部性原理"></a>内存访问的局部性原理</h3><p>指程序在执行过程中的一个较短时期，所执行的指令地址和指令的操作数地址，分别局限于一定区域。还可以表现为：</p>
+<p>• <strong>时间局部性</strong>，即一条指令的一次执行和下次执行，一个数据的一次访问和下次访问都集中在一个较短时期内；</p>
+<p>• <strong>空间局部性</strong>，即当前指令和邻近的几条指令，当前访问的数据和邻近的数据都集中在一个较小区域内。</p>
+<h3 id="页面置换策略"><a href="#页面置换策略" class="headerlink" title="页面置换策略"></a>页面置换策略</h3><h4 id="最优算法：OPT"><a href="#最优算法：OPT" class="headerlink" title="最优算法：OPT"></a>最优算法：OPT</h4><p>页错误率最低，无法被实现。</p>
+<p>淘汰页应是<strong>以后不再访问</strong>的页或<strong>距现在最长时间后再访问的页</strong>。</p>
+<h4 id="先进先出：FIFO"><a href="#先进先出：FIFO" class="headerlink" title="先进先出：FIFO"></a>先进先出：FIFO</h4><p>淘汰页：<strong>最先调入内存</strong>的页。</p>
+<p><strong>性能较差</strong>，有Belady现象。</p>
+<blockquote>
+<h6 id="Belady"><a href="#Belady" class="headerlink" title="Belady"></a>Belady</h6><p>在使用FIFO算法作为缺页置换算法时，分配的缺页增多，但缺页率反而提高。</p>
+<p>在使用FIFO算法作为缓存算法时，同样也会遇到类似情况：增加缓存容量，但缓存命中率也会下降。</p>
+</blockquote>
+<h4 id="第二次机会算法SCR"><a href="#第二次机会算法SCR" class="headerlink" title="第二次机会算法SCR"></a>第二次机会算法SCR</h4><p><strong>改进的FIFO</strong>。其思想：“如果被淘汰的数据之前被访问过，则给其第二次机会”。</p>
+<h4 id="时钟算法：Clock"><a href="#时钟算法：Clock" class="headerlink" title="时钟算法：Clock"></a>时钟算法：Clock</h4><p><strong>改进的FIFO</strong>，也称最近未使用算法（NRU），通过一个环形队列，避免将数据在FIFO队列中移动。</p>
+<h4 id="FIFO类算法对比"><a href="#FIFO类算法对比" class="headerlink" title="FIFO类算法对比"></a>FIFO类算法对比</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>对比点</th>
+<th>对比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命中率</td>
+<td><strong>Clock = SCR &gt; FIFO</strong></td>
+</tr>
+<tr>
+<td>复杂度</td>
+<td><strong>SCR &gt; Clock &gt; FIFO</strong></td>
+</tr>
+<tr>
+<td>代价</td>
+<td><strong>SCR &gt; Clock &gt; FIFO</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="最近最少使用：LRU"><a href="#最近最少使用：LRU" class="headerlink" title="最近最少使用：LRU"></a>最近最少使用：LRU</h4><p>思想：“如果数据最近被访问过，那么将来被访问的几率也更高”。</p>
+<p>局部性原理的合理近似，性能接近最佳算法。但由于需要记录页面使用时间的先后关系，硬件开销太大。</p>
+<h4 id="老化算法：AGING"><a href="#老化算法：AGING" class="headerlink" title="老化算法：AGING"></a>老化算法：AGING</h4><p><strong>LRU的简化，但性能接近LRU</strong>。为每个页码设置一个移位寄存器，并设置一位访问位R，每隔一段时间，所有寄存器右移1位，并将R值从左移入。</p>
+<h4 id="最不频繁使用：LFU"><a href="#最不频繁使用：LFU" class="headerlink" title="最不频繁使用：LFU"></a>最不频繁使用：LFU</h4><h4 id="工作集策略"><a href="#工作集策略" class="headerlink" title="工作集策略"></a>工作集策略</h4><p>进程的<strong>工作集</strong>：当前正在使用的页面的集合；</p>
+<p>进程的<strong>驻留集</strong>：虚拟存储系统中，每个进程驻留在内存的页面集合，或进程分到的物理页框集合。</p>
+<p>引入工作集的目的：依据进程在过去的一段时间内访问的页面来调整驻留集大小。</p>
+<p>工作集策略：NT根据内存负荷和进程缺页情况自动调整工作集。进程创建时，指定一个最小工作集，当内核负荷不太大时，允许进程拥有尽可能多的页面；系统通过自动调整保证内存中有一定的空闲页面存在。</p>
+<h3 id="缺页中断率"><a href="#缺页中断率" class="headerlink" title="缺页中断率"></a>缺页中断率</h3><h2 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h2><h3 id="内存抖动"><a href="#内存抖动" class="headerlink" title="内存抖动"></a>内存抖动</h3><h4 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h4><p>随着驻留内存的进程数目增加，或者说进程并发水平的上升，处理器利用率先是上升，然后下降。这里下降的原因通常称为虚拟存储器发生“抖动”，即每个进程的驻留集不断减小，当驻留集小于工作集后，缺页率急剧上升频繁调页使得调页开销增大。</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><ul>
+<li>局部置换策略（微观层面）：正在抖动的进程不能从另外的进程夺取内存块。并未消除抖动的发生。</li>
+<li>引入工作集算法（微观）</li>
+<li>预留部分页面（微观或宏观）</li>
+<li>挂起若干进程：消除抖动现象（宏观）</li>
+</ul>
+<h3 id="写时复制技术"><a href="#写时复制技术" class="headerlink" title="写时复制技术"></a>写时复制技术</h3><h3 id="内存映射文件"><a href="#内存映射文件" class="headerlink" title="内存映射文件"></a>内存映射文件</h3><h3 id="存储保护-1"><a href="#存储保护-1" class="headerlink" title="存储保护"></a>存储保护</h3>
+
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a
+              href="/2024/06/05/Operate-System-Term-View-2/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="OS Term Review (2)"
+              >&larr; Previous Post</a
+            >
+          </li>
+           
+        </ul>
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
+        
+        <!-- tip end -->
+
+        <!-- Music start-->
+         
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/music-player/utill.js"></script>
+
+
+<script src="/js/music-player/jquery.min.js"></script>
+
+<!-- netease; qqkg -->
+<!--
+<script src="/js/music-player/player.js?library=config.music.library.js"></script>
+-->
+<script src="../../../../js/music-player/player.js?library=netease&music=https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html"></script> 
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#序"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">序</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#考纲"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">考纲</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#引论"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">引论</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#冯·诺伊曼体系结构"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">冯·诺伊曼体系结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#组成"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">组成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#架构局限"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">架构局限</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#操作系统的发展变化"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">操作系统的发展变化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#批处理系统"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">批处理系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#定义"><span class="toc-nav-number">3.2.1.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#分类"><span class="toc-nav-number">3.2.1.2.</span> <span class="toc-nav-text">分类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#多道程序系统"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">多道程序系统</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分时系统"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">分时系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#定义-1"><span class="toc-nav-number">3.2.3.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#特点"><span class="toc-nav-number">3.2.3.2.</span> <span class="toc-nav-text">特点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#实时、网络、分布式"><span class="toc-nav-number">3.2.4.</span> <span class="toc-nav-text">实时、网络、分布式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实时"><span class="toc-nav-number">3.2.4.1.</span> <span class="toc-nav-text">实时</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#网络"><span class="toc-nav-number">3.2.4.2.</span> <span class="toc-nav-text">网络</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#分布式"><span class="toc-nav-number">3.2.4.3.</span> <span class="toc-nav-text">分布式</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#操作系统的主要功能"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">操作系统的主要功能</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程管理（处理机分配）"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">进程管理（处理机分配）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#核心任务：如何分配CPU时间"><span class="toc-nav-number">3.3.1.1.</span> <span class="toc-nav-text">核心任务：如何分配CPU时间</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#主要功能"><span class="toc-nav-number">3.3.1.2.</span> <span class="toc-nav-text">主要功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#存储管理"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">存储管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#核心任务"><span class="toc-nav-number">3.3.2.1.</span> <span class="toc-nav-text">核心任务</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#主要功能-1"><span class="toc-nav-number">3.3.2.2.</span> <span class="toc-nav-text">主要功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设备管理（包括磁盘管理）"><span class="toc-nav-number">3.3.3.</span> <span class="toc-nav-text">设备管理（包括磁盘管理）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#核心任务-1"><span class="toc-nav-number">3.3.3.1.</span> <span class="toc-nav-text">核心任务</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#主要功能-2"><span class="toc-nav-number">3.3.3.2.</span> <span class="toc-nav-text">主要功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件系统"><span class="toc-nav-number">3.3.4.</span> <span class="toc-nav-text">文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#核心任务-2"><span class="toc-nav-number">3.3.4.1.</span> <span class="toc-nav-text">核心任务</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#主要功能-3"><span class="toc-nav-number">3.3.4.2.</span> <span class="toc-nav-text">主要功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#接口管理"><span class="toc-nav-number">3.3.5.</span> <span class="toc-nav-text">接口管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#程序接口"><span class="toc-nav-number">3.3.5.1.</span> <span class="toc-nav-text">程序接口</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#用户接口"><span class="toc-nav-number">3.3.5.2.</span> <span class="toc-nav-text">用户接口</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#现代操作系统的基本特征"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">现代操作系统的基本特征</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#操作系统的工作模式"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">操作系统的工作模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#内核态-管态"><span class="toc-nav-number">3.5.1.</span> <span class="toc-nav-text">内核态&#x2F;管态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#用户态-目态"><span class="toc-nav-number">3.5.2.</span> <span class="toc-nav-text">用户态&#x2F;目态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#切换过程？"><span class="toc-nav-number">3.5.3.</span> <span class="toc-nav-text">切换过程？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#几个术语"><span class="toc-nav-number">3.5.4.</span> <span class="toc-nav-text">几个术语</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#特权指令-保护指令"><span class="toc-nav-number">3.5.4.1.</span> <span class="toc-nav-text">特权指令&#x2F;保护指令</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#异常：中断、陷入（作用、区别？）（系统调用过程）"><span class="toc-nav-number">3.5.4.2.</span> <span class="toc-nav-text">异常：中断、陷入（作用、区别？）（系统调用过程）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#系统调用的概念"><span class="toc-nav-number">3.5.4.3.</span> <span class="toc-nav-text">系统调用的概念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#系统调用和函数调用的区别"><span class="toc-nav-number">3.5.5.</span> <span class="toc-nav-text">系统调用和函数调用的区别</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#用户态程序如何访问系统功能，描述过程，如何切换入内核态执行"><span class="toc-nav-number">3.5.5.1.</span> <span class="toc-nav-text">用户态程序如何访问系统功能，描述过程，如何切换入内核态执行</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#操作系统结构"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">操作系统结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#计算机体系结构中的接口"><span class="toc-nav-number">3.6.1.</span> <span class="toc-nav-text">计算机体系结构中的接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#什么是操作系统内核？如何进入？"><span class="toc-nav-number">3.6.2.</span> <span class="toc-nav-text">什么是操作系统内核？如何进入？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#微内核、整体内核（宏内核）"><span class="toc-nav-number">3.6.3.</span> <span class="toc-nav-text">微内核、整体内核（宏内核）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#辨析"><span class="toc-nav-number">3.6.3.1.</span> <span class="toc-nav-text">辨析</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#优缺点"><span class="toc-nav-number">3.6.3.2.</span> <span class="toc-nav-text">优缺点</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#操作系统引导"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">操作系统引导</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#OS分阶段引导过程"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">OS分阶段引导过程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#各个阶段的职责"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">各个阶段的职责</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#各个阶段引导程序的存储与装载过程"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">各个阶段引导程序的存储与装载过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#程序的装载细节"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">程序的装载细节</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#简述Linux内核在x86平台上的加载过程"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">简述Linux内核在x86平台上的加载过程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#存储管理-1"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">存储管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#存储管理的功能"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">存储管理的功能</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#内存的分配与回收"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">内存的分配与回收</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#存储保护"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">存储保护</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#地址转换"><span class="toc-nav-number">5.1.3.</span> <span class="toc-nav-text">地址转换</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#静态重定位"><span class="toc-nav-number">5.1.4.</span> <span class="toc-nav-text">静态重定位</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#动态重定位"><span class="toc-nav-number">5.1.5.</span> <span class="toc-nav-text">动态重定位</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#存储共享"><span class="toc-nav-number">5.1.6.</span> <span class="toc-nav-text">存储共享</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#扩充内存容量"><span class="toc-nav-number">5.1.7.</span> <span class="toc-nav-text">扩充内存容量</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分区存储管理"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">分区存储管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#固定分区"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">固定分区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#基本思想"><span class="toc-nav-number">5.2.1.1.</span> <span class="toc-nav-text">基本思想</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#优缺点-1"><span class="toc-nav-number">5.2.1.2.</span> <span class="toc-nav-text">优缺点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#碎片"><span class="toc-nav-number">5.2.1.2.1.</span> <span class="toc-nav-text">碎片</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#内部碎片"><span class="toc-nav-number">5.2.1.2.1.1.</span> <span class="toc-nav-text">内部碎片</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#外部碎片"><span class="toc-nav-number">5.2.1.2.1.2.</span> <span class="toc-nav-text">外部碎片</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#如何消除内部碎片和外部碎片"><span class="toc-nav-number">5.2.1.2.1.3.</span> <span class="toc-nav-text">如何消除内部碎片和外部碎片</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#可变分区"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">可变分区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#基本思想-1"><span class="toc-nav-number">5.2.2.1.</span> <span class="toc-nav-text">基本思想</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#优缺点-2"><span class="toc-nav-number">5.2.2.2.</span> <span class="toc-nav-text">优缺点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#动态分配数据结构"><span class="toc-nav-number">5.2.2.3.</span> <span class="toc-nav-text">动态分配数据结构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#主要算法"><span class="toc-nav-number">5.2.2.4.</span> <span class="toc-nav-text">主要算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#BestFit"><span class="toc-nav-number">5.2.2.4.1.</span> <span class="toc-nav-text">BestFit</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#WorstFit"><span class="toc-nav-number">5.2.2.4.2.</span> <span class="toc-nav-text">WorstFit</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#FirstFit"><span class="toc-nav-number">5.2.2.4.3.</span> <span class="toc-nav-text">FirstFit</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#NextFit"><span class="toc-nav-number">5.2.2.4.4.</span> <span class="toc-nav-text">NextFit</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#覆盖与交换"><span class="toc-nav-number">5.2.3.</span> <span class="toc-nav-text">覆盖与交换</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#覆盖"><span class="toc-nav-number">5.2.3.1.</span> <span class="toc-nav-text">覆盖</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#交换"><span class="toc-nav-number">5.2.3.2.</span> <span class="toc-nav-text">交换</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#区别"><span class="toc-nav-number">5.2.3.3.</span> <span class="toc-nav-text">区别</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#页式存储管理"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">页式存储管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#页面、页框"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">页面、页框</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#地址转换-1"><span class="toc-nav-number">5.3.2.</span> <span class="toc-nav-text">地址转换</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#MMU"><span class="toc-nav-number">5.3.2.1.</span> <span class="toc-nav-text">MMU</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#页表"><span class="toc-nav-number">5.3.2.2.</span> <span class="toc-nav-text">页表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#多级页表"><span class="toc-nav-number">5.3.2.2.1.</span> <span class="toc-nav-text">多级页表</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#杂凑页表"><span class="toc-nav-number">5.3.2.2.2.</span> <span class="toc-nav-text">杂凑页表</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#反置页表"><span class="toc-nav-number">5.3.2.2.3.</span> <span class="toc-nav-text">反置页表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#快表TLB"><span class="toc-nav-number">5.3.2.3.</span> <span class="toc-nav-text">快表TLB</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#页面的大小"><span class="toc-nav-number">5.3.2.4.</span> <span class="toc-nav-text">页面的大小</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#自映射"><span class="toc-nav-number">5.3.3.</span> <span class="toc-nav-text">自映射</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#段式存储管理"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">段式存储管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基本思想-2"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">基本思想</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#地址变换"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">地址变换</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分页与分段的比较（辨析异同）"><span class="toc-nav-number">5.4.3.</span> <span class="toc-nav-text">分页与分段的比较（辨析异同）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#段页式内存管理"><span class="toc-nav-number">5.4.4.</span> <span class="toc-nav-text">段页式内存管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#基本思想-3"><span class="toc-nav-number">5.4.4.1.</span> <span class="toc-nav-text">基本思想</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实现原理"><span class="toc-nav-number">5.4.4.2.</span> <span class="toc-nav-text">实现原理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#虚拟存储：原理与算法"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">虚拟存储：原理与算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#内存访问的局部性原理"><span class="toc-nav-number">5.5.1.</span> <span class="toc-nav-text">内存访问的局部性原理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#页面置换策略"><span class="toc-nav-number">5.5.2.</span> <span class="toc-nav-text">页面置换策略</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#最优算法：OPT"><span class="toc-nav-number">5.5.2.1.</span> <span class="toc-nav-text">最优算法：OPT</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#先进先出：FIFO"><span class="toc-nav-number">5.5.2.2.</span> <span class="toc-nav-text">先进先出：FIFO</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Belady"><span class="toc-nav-number">5.5.2.2.0.1.</span> <span class="toc-nav-text">Belady</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#第二次机会算法SCR"><span class="toc-nav-number">5.5.2.3.</span> <span class="toc-nav-text">第二次机会算法SCR</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#时钟算法：Clock"><span class="toc-nav-number">5.5.2.4.</span> <span class="toc-nav-text">时钟算法：Clock</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#FIFO类算法对比"><span class="toc-nav-number">5.5.2.5.</span> <span class="toc-nav-text">FIFO类算法对比</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#最近最少使用：LRU"><span class="toc-nav-number">5.5.2.6.</span> <span class="toc-nav-text">最近最少使用：LRU</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#老化算法：AGING"><span class="toc-nav-number">5.5.2.7.</span> <span class="toc-nav-text">老化算法：AGING</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#最不频繁使用：LFU"><span class="toc-nav-number">5.5.2.8.</span> <span class="toc-nav-text">最不频繁使用：LFU</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#工作集策略"><span class="toc-nav-number">5.5.2.9.</span> <span class="toc-nav-text">工作集策略</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#缺页中断率"><span class="toc-nav-number">5.5.3.</span> <span class="toc-nav-text">缺页中断率</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他内容"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">其他内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#内存抖动"><span class="toc-nav-number">5.6.1.</span> <span class="toc-nav-text">内存抖动</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#定义-2"><span class="toc-nav-number">5.6.1.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解决办法"><span class="toc-nav-number">5.6.1.2.</span> <span class="toc-nav-text">解决办法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#写时复制技术"><span class="toc-nav-number">5.6.2.</span> <span class="toc-nav-text">写时复制技术</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#内存映射文件"><span class="toc-nav-number">5.6.3.</span> <span class="toc-nav-text">内存映射文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#存储保护-1"><span class="toc-nav-number">5.6.4.</span> <span class="toc-nav-text">存储保护</span></a></li></ol></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#review"
+              title="review"
+              >review</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
+
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/forestbookk">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/NONO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/NONO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/NONO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; forestbookk 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
+                        <i>hexo-theme-snail</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://forestbookk.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🍀&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+</html>

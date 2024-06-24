@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="Planting Tree" />
+  <meta name="keyword" content="Coding, Dancing, Enjoying" />
+  <link rel="shortcut icon" href="/img/ironman-draw.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+     OS Term Review (2) - Shae&#39;s Blog 
+  </title>
+
+  <link
+    rel="canonical"
+    href="https://forestbookk.github.io/2024/06/05/Operate-System-Term-View-2/"
+  />
+
+  <!-- Bootstrap Core CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+  <!-- Custom CSS -->
+   
+<link rel="stylesheet" href="/css/dusign-light.css">
+ 
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+ 
+<link rel="stylesheet" href="/css/font-awesome.css">
+ 
+<link rel="stylesheet" href="/css/toc.css">
+
+  <!-- background effects end -->
+  
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="/css/highlight.css">
+ 
+<link rel="stylesheet" href="/css/widget.css">
+ 
+<link rel="stylesheet" href="/css/rocket.css">
+
+  
+<link rel="stylesheet" href="/css/signature.css">
+ 
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
+
+  <!-- photography -->
+  
+<link rel="stylesheet" href="/css/photography.css">
+
+
+  <!-- ga & ba script hoook -->
+  <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bg.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/bear.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#review" title="review">review</a>
+                            
+                        </div>
+                        <h1>OS Term Review (2)</h1>
+                        <h2 class="subheading">2023-2024 Spring Operate System</h2>
+                        <span class="meta">
+                            Posted by forestbookk on
+                            2024-06-05
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">7.2k</span> and
+                                Reading Time <span class="post-count">24</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">森林书</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                    <li>
+                        <a href="YOUR_CHINESE_BLOG_URL" target="_blank">Chinese Blog</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <h1 id="进程机制与并发程序设计"><a href="#进程机制与并发程序设计" class="headerlink" title="进程机制与并发程序设计"></a>进程机制与并发程序设计</h1><h2 id="进程与线程的基本概念"><a href="#进程与线程的基本概念" class="headerlink" title="进程与线程的基本概念"></a>进程与线程的基本概念</h2><h3 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h3><p>并发：设有两个活动a1和a2，如果在某一指定的时间t，无论a1和a2是在同一处理机上还是在不同的处理机上执行，只要a1和a2都在执行中，则称a1和a2是并发执行的。</p>
+<p>并行：两个程序在某一指定的时间t，同时运行在<strong>不同</strong>的处理机上。</p>
+<p>并行性的确定-Bernstein条件：两个进程S1和S2可并发，当且仅当下列条件同时成立：</p>
+<p><img src="image-20240604145415008.png" alt="image-20240604145415008"></p>
+<p><img src="image-20240604145406288.png" alt="image-20240604145406288"></p>
+<h3 id="进程与程序"><a href="#进程与程序" class="headerlink" title="进程与程序"></a>进程与程序</h3><p>程序：静态的。静态的实体，是存放在磁盘上的可执行文件</p>
+<p>进程：动态的。执行中的程序。进程包括程序和程序处理对象（数据集），是一个程序对某个数据集的执行过程，是分配资源的基本单位。通常把进程分为系统进程和用户进程两大类。进程的三个特征：并发、共享、不确定性。</p>
+<p>作业：用户需要计算机完成的某项任务，是要求计算机所做工作的集合</p>
+<h3 id="进程的三个基本状态、转换条件"><a href="#进程的三个基本状态、转换条件" class="headerlink" title="进程的三个基本状态、转换条件"></a>进程的三个基本状态、转换条件</h3><ul>
+<li>就绪状态：进程已获得除处理机外的所需资源，等待分配处理机资源；只要分配CPU就可执行；</li>
+<li>执行状态：占用处理机资源；</li>
+<li>阻塞状态：正在执行的进程由于发生某种事件而暂时无法执行，便放弃处理机处于暂停状态。</li>
+</ul>
+<p><img src="image-20240604145724107.png" alt="image-20240604145724107"></p>
+<h3 id="进程的控制原语"><a href="#进程的控制原语" class="headerlink" title="进程的控制原语"></a>进程的控制原语</h3><p>原语：由若干条指令所组成的指令序列，来实现某个特定的操作功能。</p>
+<ul>
+<li><p>特点</p>
+<ol>
+<li>指令序列执行是连续的，不可分割</li>
+<li>是操作系统核心组成部分</li>
+<li>必须在管态下执行，且常驻内存</li>
+</ol>
+</li>
+<li><p>和系统调用的区别：</p>
+<p><a href="https://blog.csdn.net/weixin_46248230/article/details/133207862" target="_blank" rel="noopener">原语是操作系统核心态下的原子性操作，强调原子性；系统调用是用户程序和操作系统的接口，为用户程序提供系统服务。原语常驻内存，必须在管态执行，而系统调用在用户态执行，对应的服务程序在内核态执行</a></p>
+</li>
+<li><p>创建原语：<code>fork</code>, <code>exec</code></p>
+<p><strong>Fork()函数</strong>：</p>
+<p>fork调用仅仅被调用一次，却能返回两次，它可能有三种不同的返回值：</p>
+<ol>
+<li>在父进程中，fork返回新创建子进程的进程ID；</li>
+<li>在子进程中，fork返回0；</li>
+<li>如果出现错误，fork返回一个负值；</li>
+</ol>
+</li>
+<li><p>撤销原语：<code>kill</code></p>
+</li>
+</ul>
+<p><img src="image-20240604145952434.png" alt="image-20240604145952434"></p>
+<h3 id="进程的组成：程序、数据、PCB"><a href="#进程的组成：程序、数据、PCB" class="headerlink" title="进程的组成：程序、数据、PCB"></a>进程的组成：程序、数据、PCB</h3><h3 id="进程与线程的区别"><a href="#进程与线程的区别" class="headerlink" title="进程与线程的区别"></a>进程与线程的区别</h3><p>进程是资源拥有者，线程是可执行单元。</p>
+<p>进程拥有虚空间、进程映像、处理机保护、文件、I/O空间。</p>
+<p>线程额外的资源：运行状态、保存上下文（程序计数器）、执行栈、资源共享机制。</p>
+<p><img src="image-20240604164345788.png" alt="image-20240604164345788"></p>
+<h3 id="线程的实现方式"><a href="#线程的实现方式" class="headerlink" title="线程的实现方式"></a>线程的实现方式</h3><p><img src="image-20240604154833392.png" alt="image-20240604154833392"></p>
+<p><img src="image-20240604154854666.png" alt="image-20240604154854666"></p>
+<h4 id="用户级线程"><a href="#用户级线程" class="headerlink" title="用户级线程"></a>用户级线程</h4><p>线程在用户空间，不需要或仅需要极少的kernel支持。</p>
+<p>上下文切换比较快。</p>
+<p>用户级的线程库的主要功能：</p>
+<ul>
+<li>创建和销毁线程</li>
+<li>线程之间传递消息和数据</li>
+<li>调度线程执行</li>
+<li>保存和恢复线程上下文</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>线程切换与内核无关</li>
+<li>线程的调度由应用决定，容易进行优化</li>
+<li>可运行在任何操作系统上，只需要线程库的支持</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>一个线程阻塞，所有相关的线程也会被内核阻塞。</li>
+<li>阻塞发生在进程级别。内核只能将处理器分配给进程。即使有多个处理器，也无法实现一个进程中的多个线程的并发执行。</li>
+</ul>
+<h4 id="内核级线程"><a href="#内核级线程" class="headerlink" title="内核级线程"></a>内核级线程</h4><p>思想：kernel有好几个分身，一个分身可以处理一件事。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>内核可以在多个处理器上调度一个进程的多个线程实现同步并行执行</li>
+<li>阻塞发生在线程级别</li>
+<li>内核中的一些处理可以通过多线程实现</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>一个进程中的线程切换需要内核参与，线程的切换涉及到两个模式的切换（进程-进程、线程-线程）</li>
+<li>降低效率</li>
+</ul>
+<h4 id="混合实现方式"><a href="#混合实现方式" class="headerlink" title="混合实现方式"></a>混合实现方式</h4><p>线程在用户空间创建和管理。需要实现从用户空间的线程到内核空间线程（轻量级进程）的映射。</p>
+<h2 id="进程调度算法"><a href="#进程调度算法" class="headerlink" title="进程调度算法"></a>进程调度算法</h2><h3 id="调度的三个类型：高级、中级、低级"><a href="#调度的三个类型：高级、中级、低级" class="headerlink" title="调度的三个类型：高级、中级、低级"></a>调度的三个类型：高级、中级、低级</h3><h4 id="高级调度-宏观调度-作业调度"><a href="#高级调度-宏观调度-作业调度" class="headerlink" title="高级调度/宏观调度/作业调度"></a>高级调度/宏观调度/作业调度</h4><p><strong>用户角度</strong>，一次提交若干个作业，对每个作业进行调度。</p>
+<h4 id="中级调度-内外存交换"><a href="#中级调度-内外存交换" class="headerlink" title="中级调度/内外存交换"></a>中级调度/内外存交换</h4><p><strong>存储器资源管理</strong>的角度，将进程的部分或全部换出到外存上，将当前所需部分换入到内存。</p>
+<h4 id="低级调度-微观调度-进程或线程调度"><a href="#低级调度-微观调度-进程或线程调度" class="headerlink" title="低级调度/微观调度/进程或线程调度"></a>低级调度/微观调度/进程或线程调度</h4><p><strong>CPU资源管理</strong>的角度，执行的单位。</p>
+<h3 id="进程调度算法-1"><a href="#进程调度算法-1" class="headerlink" title="进程调度算法"></a>进程调度算法</h3><h4 id="总体上：非抢占、抢占"><a href="#总体上：非抢占、抢占" class="headerlink" title="总体上：非抢占、抢占"></a>总体上：非抢占、抢占</h4><p>抢占即，就绪队列中一旦有优先级高于当前运行进程优先级的进程存在时，立即进行进程调度。</p>
+<h4 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h4><p>–<strong>周转时间、平均周转时间、带权平均周转时间</strong></p>
+<ul>
+<li>$周转时间=完成时刻-提交时刻$</li>
+<li>$带权周转时间=周转时间/服务时间(执行时间)$</li>
+<li>$平均周转时间=作业周转时间之和/作业数$</li>
+<li>$平均带权周转时间=作业带权周转时间之和/作业数$</li>
+</ul>
+<p>–<strong>吞吐量</strong></p>
+<p>$吞吐量=作业数/总执行时间$，即单位时间CPU完成的作业数量</p>
+<p>–<strong>响应时间</strong></p>
+<h4 id="常见调度算法"><a href="#常见调度算法" class="headerlink" title="常见调度算法"></a>常见调度算法</h4><h5 id="先来先服务FCFS"><a href="#先来先服务FCFS" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h5><p>最简单的调度算法，按先后顺序调度。非抢占式。</p>
+<p>比较有利于长作业、CPU繁忙的作业。不适合短作业、I/O繁忙的作业。</p>
+<h5 id="短作业优先SJF"><a href="#短作业优先SJF" class="headerlink" title="短作业优先SJF"></a>短作业优先SJF</h5><p>对FCFS的改进，目标：减少平均周转时间</p>
+<p>对预计执行时间短的作业（进程）优先分派处理机。通常后来的短作业不抢占正在执行的作业。</p>
+<p>优点：比FCFS改善平均周转时间和平均带权周转时间，缩短作业的等待时间。提高系统的吞吐量。</p>
+<p>缺点：对长作业非常不利。未能依据作业的紧迫程度来划分执行的优先级；难以准确估计执行时间从而影响调度性能。</p>
+<h5 id="最短剩余时间优先SRTN"><a href="#最短剩余时间优先SRTN" class="headerlink" title="最短剩余时间优先SRTN"></a>最短剩余时间优先SRTN</h5><p>对SJF的改进，改进为<strong>抢占式</strong>。即一个新就绪的进程比当前运行进程具有更短的完成时间，系统抢占当前进程。</p>
+<p>缺点：长任务<strong>饥饿</strong>。</p>
+<h5 id="最高响应比优先HRRN"><a href="#最高响应比优先HRRN" class="headerlink" title="最高响应比优先HRRN"></a>最高响应比优先HRRN</h5><p>FCFS和SJF的折中。非抢占式。既考虑作业的运行时间，也考虑作业的运行时间。既照顾短作业又不使长作业的等待时间过长。</p>
+<p>计算后备作业队列中每个作业的响应比RP，然后选择其值最大的作业投入运行。RP值定义为：</p>
+<p>$RP=(作业已等待时间+作业的服务时间)/作业的服务时间=1+作业已等待时间/作业的服务时间$</p>
+<p>饥饿现象不会发生。但每次计算各道作业的响应比会有一定的时间开销。</p>
+<h5 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h5><p>微观调度，目标：提高资源利用率。时间片过长会退化为FCFS算法。</p>
+<p>算法流程：</p>
+<p>§ <strong>将系统中所有的就绪进程按照FCFS原则，排成一个队列。</strong></p>
+<p>§ <strong>每次调度时将CPU分派给队首进程，让其执行一个时间片。时间片的长度从几个ms到几百ms。</strong></p>
+<p>§ <strong>在一个时间片结束时，发生时钟中断。</strong></p>
+<p>§ <strong>调度程序据此暂停当前进程的执行，将其送到就绪队列的末尾，并通过上下文切换执行当前的队首进程。</strong></p>
+<p>§ <strong>进程可以未使用完一个时间片，就出让CPU（如阻塞）。</strong></p>
+<h5 id="优先级调度"><a href="#优先级调度" class="headerlink" title="优先级调度"></a>优先级调度</h5><p>可分成抢先式和非抢先式。</p>
+<ul>
+<li>静态优先级：创建进程时就确定，直到进程终止前都不改变。</li>
+<li>动态优先级：在创建进程时赋予的优先级，在进程运行过程中可以自动改变。</li>
+<li>优先级倒置（反转）：高优先级进程（或线程）被低优先级进程（或线程）延迟或阻塞。解决方法：<ol>
+<li>优先级置顶。当进程进入临界区后，其占用的处理机就不允许被抢占。</li>
+<li>优先级继承。当高优先级进程要进入临界区使用临界资源X时，如果已经有一个低优先级进程正在使用该资源，则可以优先级继承。</li>
+</ol>
+</li>
+</ul>
+<h5 id="多级反馈队列算法MFQ"><a href="#多级反馈队列算法MFQ" class="headerlink" title="多级反馈队列算法MFQ"></a>多级反馈队列算法MFQ</h5><p>时间片轮转算法和优先级算法的综合和发展。</p>
+<h4 id="实时调度算法"><a href="#实时调度算法" class="headerlink" title="实时调度算法"></a>实时调度算法</h4><h5 id="单调速率调度RMS"><a href="#单调速率调度RMS" class="headerlink" title="单调速率调度RMS"></a>单调速率调度RMS</h5><p>单处理器下的<strong>最优静态调度算法</strong>。可通过对系统资源利用率的计算来进行任务可调度性分析。实时调度的基础性理论。</p>
+<p>任务的周期越小，其优先级越高。优先级最高的任务最先被调度。如果两个任务的优先级一样，当调度它们时，RM算法将随机选择一个调度。</p>
+<h5 id="最早截止时间优先算法EDF"><a href="#最早截止时间优先算法EDF" class="headerlink" title="最早截止时间优先算法EDF"></a>最早截止时间优先算法EDF</h5><p>任务的绝对截止时间越早，其优先级越高。</p>
+<p>任务集可调度的充分必要条件：</p>
+<p>$\sum_{i=1}^{n}\frac{C_i}{T_i}\leqslant1$</p>
+<h5 id="最低松弛度优先算法LLF"><a href="#最低松弛度优先算法LLF" class="headerlink" title="最低松弛度优先算法LLF"></a>最低松弛度优先算法LLF</h5><p>根据任务紧急的程度，来确定任务的优先级。任务的紧急度越高，其优先级越高，并使之优先执行。</p>
+<p><strong>$松弛度=任务截止时间-本身剩余运行时间-当前时间$</strong></p>
+<p>调度时机：有进程执行完或有进程的松弛度（Laxity）为0时</p>
+<p>任务集可调度的充分必要条件：</p>
+<p>$\sum_{i=1}^{n}\frac{C_i}{T_i}\leqslant1$</p>
+<h3 id="多处理机调度"><a href="#多处理机调度" class="headerlink" title="多处理机调度"></a>多处理机调度</h3><h4 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h4><ul>
+<li>非对称式多处理系统（AMP）</li>
+<li>对称式多处理系统（SMP）<ol>
+<li>自调度：所有CPU采用一个公共就绪队列。各个处理机自行在就绪队列中取任务。</li>
+</ol>
+</li>
+</ul>
+<h4 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h4><ul>
+<li>自调度</li>
+<li>成组调度</li>
+<li>专用处理机调度</li>
+</ul>
+<h2 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h2><h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><h4 id="低级通信"><a href="#低级通信" class="headerlink" title="低级通信"></a>低级通信</h4><p>只能传递状态和整数值，包括进程互斥和同步所采用的信号量和管程机制。</p>
+<p>缺点：传送信息量小、编程复杂。</p>
+<h4 id="高级通信"><a href="#高级通信" class="headerlink" title="高级通信"></a>高级通信</h4><ul>
+<li><strong>管道</strong><ol>
+<li>无名管道（Pipe）：<ul>
+<li><strong>半双工</strong>，数据只能向一个方向流动；需要双方通信时，需要建立起两个管道；</li>
+<li><strong>只能用于父子进程或兄弟进程</strong>之间（具有亲缘关系的进程）；</li>
+<li>单独构成一种<strong>独立的文件系统，只存在内存中</strong>；</li>
+<li>数据的读出和写入：一个进程向管道中写的内容被管道另一端的进程读出。写入的内容每次都添加在管道缓冲区的末尾，并且每次都是从缓冲区的头部读出数据。</li>
+</ul>
+</li>
+<li>有名管道（Named Pipe或FIFO）<ul>
+<li>可以用于能够访问FIFO路径的进程以及FIFO的创建进程之间。因此通过FIFO不相关的进程也能交换数据；</li>
+<li>严格遵循先进先出，数据的读出和写入同无名管道。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>共享内存</strong><ol>
+<li><strong>最有用</strong>的进程间通信方式，也是<strong>最快</strong>的IPC形式（原因：避免了其他形式的IPC必须执行的开销巨大的缓冲复制）</li>
+<li>两个不同进程A、B共享内存的意义是，<strong>同一块物理内存被映射到进程A、B各自的进程地址空间</strong>。</li>
+<li>当多个进程共享同一块内存区域，由于共享内存可以同时读但不能同时写</li>
+</ol>
+</li>
+<li><strong>消息系统</strong><ol>
+<li>消息传递：两个通信原语（<code>send</code>, <code>receive</code>）</li>
+<li>调用方式：阻塞调用、非阻塞调用</li>
+</ol>
+</li>
+</ul>
+<h3 id="临界资源、临界区"><a href="#临界资源、临界区" class="headerlink" title="临界资源、临界区"></a>临界资源、临界区</h3><p>临界资源：一次仅允许一个进程访问的资源；</p>
+<p>临界区：每个进程中访问临界资源的那段代码；</p>
+<h3 id="同步、互斥"><a href="#同步、互斥" class="headerlink" title="同步、互斥"></a>同步、互斥</h3><p>互斥：某一资源同时只允许一个访问者对其进行访问，具有唯一性和排他性。访问是<strong>无需访问</strong>。<strong>（间接制约关系）</strong></p>
+<p>同步：在互斥的基础上，通过其他机制实现访问者对资源的<strong>有序访问</strong>。<strong>（直接制约关系）</strong></p>
+<h4 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h4><ul>
+<li>空闲让进</li>
+<li>忙则等待</li>
+<li>有限等待</li>
+<li>让权等待</li>
+</ul>
+<h4 id="经典问题"><a href="#经典问题" class="headerlink" title="经典问题"></a>经典问题</h4><blockquote>
+<p>全面练习：孙海龙-13-4.2-进程管理-同步与互斥.ppt</p>
+</blockquote>
+<h5 id="生产者-消费者"><a href="#生产者-消费者" class="headerlink" title="生产者-消费者"></a>生产者-消费者</h5><p>若干进程通过有限的共享缓冲区交换数据。</p>
+<h5 id="读者-写者"><a href="#读者-写者" class="headerlink" title="读者-写者"></a>读者-写者</h5><h5 id="哲学家就餐"><a href="#哲学家就餐" class="headerlink" title="哲学家就餐"></a>哲学家就餐</h5><ul>
+<li>破除<strong>资源互斥</strong>：至多只允许四个哲学家同时进餐，以保证至少有一个哲学家能够进餐，最终总会释放他所使用的两支筷子。</li>
+<li>破除<strong>循环等待</strong>：对筷子进行编号，每个哲学家按编号从低到高拿起筷子；或对哲学家编号，奇数先左后右，偶数相反。</li>
+<li>破除<strong>请求且保持</strong>：同时拿起两根筷子，否则不拿起。</li>
+</ul>
+<h5 id="理发师"><a href="#理发师" class="headerlink" title="理发师"></a>理发师</h5><h3 id="信号量、PV操作"><a href="#信号量、PV操作" class="headerlink" title="信号量、PV操作"></a>信号量、PV操作</h3><p>信号量是一类特殊的变量，程序对其访问都是原子操作，且只允许对它进行P和V操作。</p>
+<p>当信号量为正时，表示资源的个数；</p>
+<p>当信号量为负时，表示等待进程的个数。</p>
+<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><ul>
+<li>优点：简单，而且<strong>表达能力强</strong>（用PV操作可解决<strong>任何</strong>同步互斥问题）。</li>
+<li>缺点：不够安全；PV操作使用不当会出现<strong>死锁</strong>；遇到复杂同步互斥问题时实现复杂。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// P操作</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">semWait</span><span class="params">(semaphore s)</span> </span>&#123;</span><br><span class="line">    s.count--;</span><br><span class="line">    <span class="keyword">if</span>(s.count &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">/* place this process in s.queue */</span></span><br><span class="line">        <span class="comment">/* block this process */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// V操作</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">semSignal</span><span class="params">(semaphore s)</span> </span>&#123;</span><br><span class="line">    s.count++;</span><br><span class="line">    <span class="keyword">if</span>(s.count &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">/* remove a process P from s.queue */</span></span><br><span class="line">        <span class="comment">/* place process P on ready list</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="实现汇合（Rendezvous）"><a href="#实现汇合（Rendezvous）" class="headerlink" title="实现汇合（Rendezvous）"></a>实现汇合（Rendezvous）</h4><p>目的：a1永远在b2之前，而b1永远在a2之前。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">semaphore aArrived = <span class="number">0</span>, bArrived = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Thread A */</span></span><br><span class="line">statement a1;</span><br><span class="line">V(aArrived);</span><br><span class="line">P(bArrived);</span><br><span class="line">statement a2;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Thread B */</span></span><br><span class="line">statement b1;</span><br><span class="line">V(bArrived);</span><br><span class="line">P(aArrived);</span><br><span class="line">statement b2;</span><br></pre></td></tr></table></figure>
+<h4 id="屏障Barriers"><a href="#屏障Barriers" class="headerlink" title="屏障Barriers"></a>屏障Barriers</h4><p><img src="image-20240604161746827.png" alt="image-20240604161746827"></p>
+<h4 id="信号量集机制"><a href="#信号量集机制" class="headerlink" title="信号量集机制"></a>信号量集机制</h4><p>▪ SP(S, d, d)：表示每次申请d个资源，当资源数量少于d个时，便不予分配。</p>
+<p>▪ SP(S, 1, 1)：表示互斥信号量。</p>
+<p>▪ SP(S, 1, 0)：可作为一个可控开关(当S≥1时，允许多个进程进入临界区；当S=0时禁止任何进程进入临界区)。</p>
+<h3 id="管程的基本概念"><a href="#管程的基本概念" class="headerlink" title="管程的基本概念"></a>管程的基本概念</h3><p>是在<strong>程序设计语言</strong>中引入的一个<strong>成分</strong>是一种高级同步机制。</p>
+<p>管程定义了一个数据结构和能为并发进程所执行（在该数据结构上）的一组操作，这组操作能同步进程和改变管程中的数据。需要解决三个问题：互斥、同步、条件变量。</p>
+<blockquote>
+<p>条件变量和信号量的区别</p>
+<p><img src="image-20240604162313118.png" alt="image-20240604162313118"></p>
+</blockquote>
+<h2 id="死锁问题"><a href="#死锁问题" class="headerlink" title="死锁问题"></a>死锁问题</h2><h3 id="基本概念：死锁、活锁、饥饿"><a href="#基本概念：死锁、活锁、饥饿" class="headerlink" title="基本概念：死锁、活锁、饥饿"></a>基本概念：死锁、活锁、饥饿</h3><p>死锁：一组进程中，每个进程都无限等待组内其他进程所占有的资源，在无外力介入的条件下，将因永远分配不道德资源而无法运行的现象。浪费大量系统资源，甚至导致系统崩溃。发生原因：资源竞争、并发执行的顺序不当。</p>
+<p>活锁：任务或执行者没有被阻塞，由于某些条件没有满足，导致一直重复尝试，失败。活锁在不断地改变状态，且有可能自行解开。</p>
+<p>饥饿：某些进程可能由于资源分配策略的不公平导致长时间等待。</p>
+<h3 id="产生死锁的必要条件"><a href="#产生死锁的必要条件" class="headerlink" title="产生死锁的必要条件"></a>产生死锁的必要条件</h3><ul>
+<li>互斥：允许进程同时访问某些资源。</li>
+<li>不可剥夺：允许进程强行从占有者那里夺取资源。</li>
+<li>请求和保持：实现资源预先分配。只有当系统能够满足当前进程的全部资源需求时，才一次性将所申请的资源全部分配给该进程，否则不分配任何进程。</li>
+<li>循环等待：把资源实现分类编号，按号分配。</li>
+</ul>
+<h3 id="进程-资源图-资源分配图"><a href="#进程-资源图-资源分配图" class="headerlink" title="进程-资源图/资源分配图"></a>进程-资源图/资源分配图</h3><blockquote>
+<p>会考</p>
+</blockquote>
+<h3 id="处理死锁的方法"><a href="#处理死锁的方法" class="headerlink" title="处理死锁的方法"></a>处理死锁的方法</h3><ul>
+<li><p>允许死锁发生：无作为、检测与解除死锁</p>
+</li>
+<li><p>不允许死锁发生：预防死锁、避免死锁</p>
+<ul>
+<li><p>预防死锁（静态）：破坏死锁产生的四个条件</p>
+</li>
+<li><p>避免死锁（动态）：在资源分配之前进行判断。安全性、银行家算法</p>
+<ol>
+<li><p>安全序列：一个序列${P_1,P_2,…,P_n}$安全，指若对于每一个进程$P_i$,它需要的资源可以被系统中当前可用资源加上所有进程$P_j(j&lt;i)$当前占有资源之和所满足。则这是一个安全序列。如果系统不存在这样一个安全序列，则系统是不安全的。系统进入不安全状态也未必产生死锁。产生死锁后，系统一定处于不安全状态。</p>
+<p><img src="image-20240604165458874.png" alt="image-20240604165458874"></p>
+</li>
+<li><p>银行家算法</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>检测与解除死锁：</p>
+<ul>
+<li>发现死锁：基于进程-资源图的化简<ol>
+<li>资源分配图中存在环路，不一定存在死锁。</li>
+<li>死锁定理：系统中某个时刻t为死锁状态的充要条件是<strong>t时刻系统的资源分配图是不可完全化简的</strong></li>
+<li>在经过一系列的简化后，若能消去图中的所有边，使所有的进程都成为孤立结点，则称该图是可完全化简的；反之的是不可完全化简的。</li>
+</ol>
+</li>
+<li>解除死锁：资源剥夺、撤销进程<ol>
+<li>剥夺资源：挂起一些进程，剥夺其资源以接触死锁，待条件满足时再激活。</li>
+<li>撤销进程：使全部死锁的进程夭折。</li>
+</ol>
+</li>
+<li>无所作为：鸵鸟算法</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-20240604170307930.png" alt="image-20240604170307930"></p>
+<h1 id="输入-输出系统"><a href="#输入-输出系统" class="headerlink" title="输入/输出系统"></a>输入/输出系统</h1><h2 id="I-O设备及控制"><a href="#I-O设备及控制" class="headerlink" title="I/O设备及控制"></a>I/O设备及控制</h2><p>I/O设备管理具体包括：</p>
+<ul>
+<li>逻辑I/O：完成设备无关的操作，如设备分配、设备回收、数据准备等。</li>
+<li>设备驱动程序：负责对设备控制器进行控制（通过读写其中的寄存器）。</li>
+<li>中断服务程序：设备工作结束后负责向CPU发中断信号，中断服务程序完成相应处理。</li>
+</ul>
+<h3 id="I-O设备"><a href="#I-O设备" class="headerlink" title="I/O设备"></a>I/O设备</h3><p>按数据组织分类：</p>
+<ul>
+<li>块设备：以数据块为单位存储、传输信息。传输速率较高、可寻址（随机读写）。</li>
+<li>字符设备：以字符为单位存储、传输信息。传输速率低、不可寻址。</li>
+</ul>
+<p>按用途分类：</p>
+<ul>
+<li>存储设备：磁盘、磁带；</li>
+<li>传输设备：网卡、Modem；</li>
+<li>人机交互设备：显示器、键盘、鼠标。</li>
+</ul>
+<p>从资源分配角度：</p>
+<ul>
+<li>独占设备：如打印机，磁带机</li>
+<li>共享设备：如硬盘</li>
+<li>虚设备</li>
+</ul>
+<h3 id="I-O控制技术（比较异同）"><a href="#I-O控制技术（比较异同）" class="headerlink" title="I/O控制技术（比较异同）"></a>I/O控制技术（比较异同）</h3><ul>
+<li><p>程序控制/轮询/查询方式IO：由CPU代表进程向I/O模块发出指令，然后进入忙等状态，直到操作完成之后进程才能够继续执行。</p>
+</li>
+<li><p>中断驱动：当I/O操作结束后由设备控制器主动地来通知设备驱动程序，而不是依靠设备驱动程序不断地去轮询看看设备的状态。</p>
+</li>
+<li><p>直接内存访问（DMA）：由一个专门的控制器来完成数据从内存到设备或者是从设备到内存的传输工作。</p>
+<p><img src="image-20240604220717103.png" alt="image-20240604220717103"></p>
+</li>
+<li><p>通道技术（Channel）：与DMA原理几乎一样。通道是一个特殊功能的处理器，它有自己的指令和程序专门负责数据输入输出的传输控制。CPU将“传输控制”的功能下放给通道后只负责“数据处理”功能。这样，通道与CPU分时使用内存，实现了CPU内部运算与I/O设备的并行工作。</p>
+<p><img src="image-20240604220740772.png" alt="image-20240604220740772"></p>
+</li>
+</ul>
+<h3 id="I-O软件的组成与分层设计"><a href="#I-O软件的组成与分层设计" class="headerlink" title="I/O软件的组成与分层设计"></a>I/O软件的组成与分层设计</h3><p><img src="image-20240604220829683.png" alt="image-20240604220829683"></p>
+<h3 id="SPOOLing技术-假脱机技术"><a href="#SPOOLing技术-假脱机技术" class="headerlink" title="SPOOLing技术/假脱机技术"></a>SPOOLing技术/假脱机技术</h3><p>可把独享设备转变成具有共享特征的虚拟设备，从而提高设备利用率。</p>
+<p>组成：</p>
+<ul>
+<li>输入井和输出井</li>
+<li>输入缓冲区和输出缓冲区</li>
+<li>输入进程$SP<em>{i}$和输出进程$SP</em>{o}$</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>高速虚拟I/O操作</li>
+<li>实现对独享设备的共享</li>
+</ul>
+<h2 id="缓冲区的管理"><a href="#缓冲区的管理" class="headerlink" title="缓冲区的管理"></a>缓冲区的管理</h2><h3 id="缓冲区作用"><a href="#缓冲区作用" class="headerlink" title="缓冲区作用"></a>缓冲区作用</h3><p>可提高外设利用率。</p>
+<p>原因：</p>
+<ul>
+<li>匹配CPU与外设的不同处理速度。</li>
+<li>减少对CPU的中断次数。</li>
+<li>提高CPU和I/O设备之间的并行性。</li>
+</ul>
+<blockquote>
+<p>设从磁盘把一块数据输入到缓冲区的时间为T，操作系统将该缓冲区中的数据传送到用户区的时间为M，而CPU对这一块数据处理的时间为C。</p>
+</blockquote>
+<h3 id="单缓冲区"><a href="#单缓冲区" class="headerlink" title="单缓冲区"></a>单缓冲区</h3><p>由于T和C是可并行的，当T&gt;C时，系统对每一块数据的处理时间为M+T，反之则为M+C。处理时间表示为$Max(C,T)+M$。</p>
+<h3 id="双缓冲区"><a href="#双缓冲区" class="headerlink" title="双缓冲区"></a>双缓冲区</h3><p>在设备输入时，先将数据送入第一缓冲区，装满后便转向第二缓冲区。此时操作系统可以从第一缓冲区中移出数据，并送入用户进程(如下图)。接着由 CPU 对数据进行计算。在双缓冲时，系统处理一块数据的时间可以粗略地认为是$Max(C，T)$。如果 C<T，可使块设备连续输入；如果 C>T，则可使 CPU 不必等待设备输入。</p>
+<h3 id="环形缓冲区"><a href="#环形缓冲区" class="headerlink" title="环形缓冲区"></a>环形缓冲区</h3><p>对于用作输入的循环缓冲，通常是提供给输入进程或计算进程使用，输入进程不断向空缓冲去输入数据，而计算进程则从中提取数据进行计算。</p>
+<p><strong>循环缓冲区的组成如下</strong></p>
+<p>• 多个缓冲区，在循环缓冲区中包括多个缓冲区，每个缓冲区的大小相同，作为输入的多缓冲区可分为三种类型，用于装输入数据的空缓冲区R、已装满数据的缓冲区G以及计算进程正在使用的工作缓冲区C。</p>
+<p>• 多个指针，作为输入的缓冲区可设置三个指针，用于指示计算进程下一个可用缓冲区G的指针Nextg、指示输入进程下次可用的空缓冲区R的指针Nexti、以及用于指示计算进程正在使用的缓冲区C的指针Current</p>
+<h3 id="缓冲池"><a href="#缓冲池" class="headerlink" title="缓冲池"></a>缓冲池</h3><p>上述仅使用于某特定的I/O进程和计算进程，因而它们属于专用缓冲。</p>
+<p>当系统较大时，将会有许多这样的循环缓冲，将消耗大量内存空间且利用率不高。</p>
+<p>共用缓冲池，包含三种类型的缓冲区：</p>
+<ul>
+<li>空缓冲区</li>
+<li>装满输入数据的缓冲区</li>
+<li>装满输出数据的缓冲区</li>
+</ul>
+<h2 id="I-O管理软件"><a href="#I-O管理软件" class="headerlink" title="I/O管理软件"></a>I/O管理软件</h2><h1 id="磁盘存储管理"><a href="#磁盘存储管理" class="headerlink" title="磁盘存储管理"></a>磁盘存储管理</h1><h2 id="磁盘的工作原理"><a href="#磁盘的工作原理" class="headerlink" title="磁盘的工作原理"></a>磁盘的工作原理</h2><p><img src="image-20240604225321280.png" alt="image-20240604225321280"></p>
+<h2 id="磁盘空间的管理"><a href="#磁盘空间的管理" class="headerlink" title="磁盘空间的管理"></a>磁盘空间的管理</h2><p>– 空闲表、空闲链表、位示图、成组链接</p>
+<h2 id="磁盘访问时间"><a href="#磁盘访问时间" class="headerlink" title="磁盘访问时间"></a>磁盘访问时间</h2><p>– 寻道时间 + 旋转延迟时间 + 传输时间</p>
+<p>$T_a=T_s＋1/(2r)＋ b/(rN)$</p>
+<p>$r:转速(r/s)$, $b:每次所读/写的字节数$, $N:磁道上的字节数$</p>
+<h2 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h2><h3 id="先来先服务FCFS-1"><a href="#先来先服务FCFS-1" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p><img src="image-20240604230054339.png" alt="image-20240604230054339"></p>
+<h3 id="最短寻道时间优先SSTF"><a href="#最短寻道时间优先SSTF" class="headerlink" title="最短寻道时间优先SSTF"></a>最短寻道时间优先SSTF</h3><p><img src="image-20240604230112935.png" alt="image-20240604230112935"></p>
+<h3 id="扫描算法SCAN"><a href="#扫描算法SCAN" class="headerlink" title="扫描算法SCAN"></a>扫描算法SCAN</h3><p><img src="image-20240604230150696.png" alt="image-20240604230150696"></p>
+<h3 id="循环扫描算法C-SCAN"><a href="#循环扫描算法C-SCAN" class="headerlink" title="循环扫描算法C-SCAN"></a>循环扫描算法C-SCAN</h3><p><img src="image-20240604230214184.png" alt="image-20240604230214184"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FCFS</strong></td>
+<td>公平、简单</td>
+<td>平均寻道距离大，仅应用在磁盘I/O较少的场合</td>
+</tr>
+<tr>
+<td><strong>SSTF</strong></td>
+<td>性能比FCFS好</td>
+<td>不能保证平均寻道时间最短，可能出现“饥饿”现象</td>
+</tr>
+<tr>
+<td><strong>SCAN</strong></td>
+<td>寻道性能好，可能避免“饥饿”现象</td>
+<td>不利于远离磁头一端的访问请求</td>
+</tr>
+<tr>
+<td><strong>C-SCAN</strong></td>
+<td>消除了对两端磁道请求的不公平</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="image-20240604230555816.png" alt="image-20240604230555816"></p>
+<p><img src="image-20240604230613371.png" alt="image-20240604230613371"></p>
+<h2 id="提高I-O速度的主要途径"><a href="#提高I-O速度的主要途径" class="headerlink" title="提高I/O速度的主要途径"></a>提高I/O速度的主要途径</h2><ul>
+<li>选择性能好的磁盘</li>
+<li>并行化</li>
+<li>采用适当的调度算法</li>
+<li>设置磁盘高速缓冲区<ol>
+<li>缓存形式<ul>
+<li>独立缓存（固定大小）</li>
+<li>以虚拟内存为缓存（弹性大小）</li>
+</ul>
+</li>
+<li>数据交付<ul>
+<li>直接交付（copy开销）</li>
+<li>指针交付（内存管理复杂）</li>
+</ul>
+</li>
+<li>置换算法：LRU</li>
+<li>周期性写回：disk cache-&gt;磁盘</li>
+</ol>
+</li>
+</ul>
+<h2 id="廉价冗余磁盘阵列-RAID"><a href="#廉价冗余磁盘阵列-RAID" class="headerlink" title="廉价冗余磁盘阵列: RAID"></a>廉价冗余磁盘阵列: RAID</h2><blockquote>
+<p>笔者真没能想到最后一题选择考了这个，还仔细地考了每个级别的特殊之处。</p>
+</blockquote>
+<ul>
+<li>利用冗余技术提高可靠性</li>
+<li>利用并行提高性能</li>
+</ul>
+<p>定义：把多种独立的硬盘（物理硬盘）按照不同方式组合起来形成一个硬盘组（逻辑硬盘），从而提供比单个硬盘更高的存储性能和提供数据冗余的技术。</p>
+<p>组成磁盘阵列的不同方式：RAID级别。</p>
+<p>数据冗余的功能是在用户数据一旦发生损坏后，利用冗余信息可以使损失数据得以恢复，从而保障了用户数据的安全性。</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>成本低，功耗小，传输速率高</li>
+</ul>
+<p>• RAID比起传统的大直径磁盘驱动器来，在同样的容量下，价格要低许多。</p>
+<p>• RAID让很多磁盘驱动器<strong>并行传输数据</strong>比单个磁盘驱动器提高几倍、几十倍甚至上百倍的速率。有效缓解了快速的CPU与慢速的磁盘之间的矛盾</p>
+<ul>
+<li>可提供容错功能</li>
+</ul>
+<p>• 普通磁盘驱动器只能通过CRC(循环冗余校验)码提供简单的容错，RAID建立在每个磁盘驱动器的硬件容错功能之上，可提供<strong>更高的可靠性</strong></p>
+<h3 id="RAID分级"><a href="#RAID分级" class="headerlink" title="RAID分级"></a>RAID分级</h3><p>主流的RAID有7个级别。</p>
+<p><img src="image-20240604232954270.png" alt="image-20240604232954270"></p>
+<p><img src="image-20240604233050985.png" alt="image-20240604233050985"></p>
+<h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="文件的概念"><a href="#文件的概念" class="headerlink" title="文件的概念"></a>文件的概念</h3><p>一组带标识的、在逻辑上有完整<strong>意义</strong>的<strong>信息项</strong>的序列。实际上是一组<strong>字节序列</strong>：一切皆文件。文件包括两部分：</p>
+<ul>
+<li>文件体：文件本身的内容；</li>
+<li>文件说明：文件存储和管理的相关信息。</li>
+</ul>
+<h3 id="文件的形式"><a href="#文件的形式" class="headerlink" title="文件的形式"></a>文件的形式</h3><ul>
+<li>以字节为单位的<strong>流式结构</strong></li>
+<li><strong>记录性文件</strong>结构</li>
+<li><strong>树形结构</strong></li>
+</ul>
+<h3 id="目录的概念"><a href="#目录的概念" class="headerlink" title="目录的概念"></a>目录的概念</h3><p><strong>由文件说明索引组成的用于文件检索的特殊文件</strong>。内容主要是文件访问和控制的信息（不包括文件内容）。</p>
+<h3 id="文件系统的功能"><a href="#文件系统的功能" class="headerlink" title="文件系统的功能"></a>文件系统的功能</h3><h2 id="目录的作用、内容、结构"><a href="#目录的作用、内容、结构" class="headerlink" title="目录的作用、内容、结构"></a>目录的作用、内容、结构</h2><p>根据用户给出的ASCII形式的文件名（路径名），迅速地定位到相应的文件控制块。</p>
+<p>不同的系统采用不同的实现方法，一般分为两类：</p>
+<p>§ 直接法：目录项＝文件名＋文件控制块（属性信息、在外存上的存放位置）。如MS-DOS/Windows；</p>
+<p>§ 间接法：目录项＝文件名＋文件控制块的地址（索引号）。如Unix（inode）；</p>
+<h2 id="文件系统实现技术"><a href="#文件系统实现技术" class="headerlink" title="文件系统实现技术"></a>文件系统实现技术</h2><h3 id="文件控制块"><a href="#文件控制块" class="headerlink" title="文件控制块"></a>文件控制块</h3><ul>
+<li><p>基本信息</p>
+<ul>
+<li>文件名</li>
+<li>物理位置</li>
+<li>文件逻辑结构：有/无结构（记录文件，流式文件）</li>
+<li>文件物理结构：如顺序，索引等</li>
+</ul>
+</li>
+<li><p>访问控制信息</p>
+<ul>
+<li>文件所有者（属主）</li>
+<li>访问权限</li>
+</ul>
+</li>
+<li>使用信息<ul>
+<li>创建时间，上一次修改时间，当前使用信息等。</li>
+</ul>
+</li>
+</ul>
+<h3 id="文件的逻辑结构：记录、流式"><a href="#文件的逻辑结构：记录、流式" class="headerlink" title="文件的逻辑结构：记录、流式"></a>文件的逻辑结构：记录、流式</h3><h3 id="文件的物理结构"><a href="#文件的物理结构" class="headerlink" title="文件的物理结构"></a>文件的物理结构</h3><h4 id="连续文件"><a href="#连续文件" class="headerlink" title="连续文件"></a>连续文件</h4><p>容易出现磁盘碎片，适合变化不大的文件</p>
+<p>§ 优点：</p>
+<p>§ 结构简单，实现容易，不需要额外的空间开销</p>
+<p>§ 顺序存取和随机存取的效率高</p>
+<p>§ 缺点：</p>
+<p>§ 文件长度一经固定便不易改变；</p>
+<p>§ 不利于文件的动态增加和修改；</p>
+<h4 id="串联文件"><a href="#串联文件" class="headerlink" title="串联文件"></a>串联文件</h4><p>§ 优点：</p>
+<p>§ 空间利用率高；能较好的利用外存空间；</p>
+<p>§ 文件动态扩充和修改容易；</p>
+<p>§ 顺序存取效率高；类似于存储管理中的页式</p>
+<p>§ 缺点：</p>
+<p>§ 随机存取效率太低，如果访问文件的最后的内容，实际</p>
+<p>上是要访问整个文件。</p>
+<p>§ 可靠性问题，如指针出错;</p>
+<p>§ 链接指针占用一定的空间。</p>
+<h4 id="索引文件：一级索引、多级索引"><a href="#索引文件：一级索引、多级索引" class="headerlink" title="索引文件：一级索引、多级索引"></a>索引文件：一级索引、多级索引</h4><p>§ 一个文件的信息存放在若干个不连续物理块中</p>
+<p>§ 系统为每个文件建立一个专用数据结构：索引表，并将这些物理块的块号存放在该索引中。</p>
+<p>§ 索引表就是磁盘块地址数组，其中第i个条目指向文件的第i块。</p>
+<p><img src="image-20240604234653755.png" alt="image-20240604234653755"></p>
+<h2 id="文件的共享、保护、保密"><a href="#文件的共享、保护、保密" class="headerlink" title="文件的共享、保护、保密"></a>文件的共享、保护、保密</h2><h3 id="保护文件的方法"><a href="#保护文件的方法" class="headerlink" title="保护文件的方法"></a>保护文件的方法</h3><ul>
+<li>建立副本<ol>
+<li>优点：方法简单</li>
+<li>缺点：设备费用和系统开销增大</li>
+<li>适用于短小且极为重要的文件</li>
+</ol>
+</li>
+<li>定时转储</li>
+<li>规定文件的权限</li>
+</ul>
+<h3 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h3><p>§ 磁盘服务：速度成为系统性能的主要瓶颈之一。因此，在设计文件系统时应尽可能减少磁盘访问次数。</p>
+<p>§ 提高文件系统性能的方法：目录项分解、当前目录、磁盘碎片整理、<strong>块高速缓存</strong>、磁盘调度、提前读取、合理分配磁盘空间、数据的优化分布、RAID技术等。</p>
+
+
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a
+              href="/2024/06/24/Hexo-Theme-Snail/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Guide to Setting Up a Hexo Blog"
+              >&larr; Previous Post</a
+            >
+          </li>
+           
+          <li class="next">
+            <a
+              href="/2024/06/05/Operate-System-Term-View-1/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="OS Term Review (1)"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
+        </ul>
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
+        
+        <!-- tip end -->
+
+        <!-- Music start-->
+         
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/music-player/utill.js"></script>
+
+
+<script src="/js/music-player/jquery.min.js"></script>
+
+<!-- netease; qqkg -->
+<!--
+<script src="/js/music-player/player.js?library=config.music.library.js"></script>
+-->
+<script src="../../../../js/music-player/player.js?library=netease&music=https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html"></script> 
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#进程机制与并发程序设计"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">进程机制与并发程序设计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#进程与线程的基本概念"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">进程与线程的基本概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#并发与并行"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">并发与并行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程与程序"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">进程与程序</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程的三个基本状态、转换条件"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">进程的三个基本状态、转换条件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程的控制原语"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">进程的控制原语</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程的组成：程序、数据、PCB"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">进程的组成：程序、数据、PCB</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程与线程的区别"><span class="toc-nav-number">1.1.6.</span> <span class="toc-nav-text">进程与线程的区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#线程的实现方式"><span class="toc-nav-number">1.1.7.</span> <span class="toc-nav-text">线程的实现方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#用户级线程"><span class="toc-nav-number">1.1.7.1.</span> <span class="toc-nav-text">用户级线程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#内核级线程"><span class="toc-nav-number">1.1.7.2.</span> <span class="toc-nav-text">内核级线程</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#混合实现方式"><span class="toc-nav-number">1.1.7.3.</span> <span class="toc-nav-text">混合实现方式</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#进程调度算法"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">进程调度算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#调度的三个类型：高级、中级、低级"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">调度的三个类型：高级、中级、低级</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#高级调度-宏观调度-作业调度"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">高级调度&#x2F;宏观调度&#x2F;作业调度</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#中级调度-内外存交换"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">中级调度&#x2F;内外存交换</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#低级调度-微观调度-进程或线程调度"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">低级调度&#x2F;微观调度&#x2F;进程或线程调度</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程调度算法-1"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">进程调度算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#总体上：非抢占、抢占"><span class="toc-nav-number">1.2.2.1.</span> <span class="toc-nav-text">总体上：非抢占、抢占</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#评价指标"><span class="toc-nav-number">1.2.2.2.</span> <span class="toc-nav-text">评价指标</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#常见调度算法"><span class="toc-nav-number">1.2.2.3.</span> <span class="toc-nav-text">常见调度算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#先来先服务FCFS"><span class="toc-nav-number">1.2.2.3.1.</span> <span class="toc-nav-text">先来先服务FCFS</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#短作业优先SJF"><span class="toc-nav-number">1.2.2.3.2.</span> <span class="toc-nav-text">短作业优先SJF</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#最短剩余时间优先SRTN"><span class="toc-nav-number">1.2.2.3.3.</span> <span class="toc-nav-text">最短剩余时间优先SRTN</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#最高响应比优先HRRN"><span class="toc-nav-number">1.2.2.3.4.</span> <span class="toc-nav-text">最高响应比优先HRRN</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#时间片轮转算法"><span class="toc-nav-number">1.2.2.3.5.</span> <span class="toc-nav-text">时间片轮转算法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#优先级调度"><span class="toc-nav-number">1.2.2.3.6.</span> <span class="toc-nav-text">优先级调度</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#多级反馈队列算法MFQ"><span class="toc-nav-number">1.2.2.3.7.</span> <span class="toc-nav-text">多级反馈队列算法MFQ</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实时调度算法"><span class="toc-nav-number">1.2.2.4.</span> <span class="toc-nav-text">实时调度算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#单调速率调度RMS"><span class="toc-nav-number">1.2.2.4.1.</span> <span class="toc-nav-text">单调速率调度RMS</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#最早截止时间优先算法EDF"><span class="toc-nav-number">1.2.2.4.2.</span> <span class="toc-nav-text">最早截止时间优先算法EDF</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#最低松弛度优先算法LLF"><span class="toc-nav-number">1.2.2.4.3.</span> <span class="toc-nav-text">最低松弛度优先算法LLF</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#多处理机调度"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">多处理机调度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#系统"><span class="toc-nav-number">1.2.3.1.</span> <span class="toc-nav-text">系统</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#调度"><span class="toc-nav-number">1.2.3.2.</span> <span class="toc-nav-text">调度</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#进程通信"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">进程通信</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#类型"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#低级通信"><span class="toc-nav-number">1.3.1.1.</span> <span class="toc-nav-text">低级通信</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#高级通信"><span class="toc-nav-number">1.3.1.2.</span> <span class="toc-nav-text">高级通信</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#临界资源、临界区"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">临界资源、临界区</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#同步、互斥"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">同步、互斥</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#原则"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">原则</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#经典问题"><span class="toc-nav-number">1.3.3.2.</span> <span class="toc-nav-text">经典问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#生产者-消费者"><span class="toc-nav-number">1.3.3.2.1.</span> <span class="toc-nav-text">生产者-消费者</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#读者-写者"><span class="toc-nav-number">1.3.3.2.2.</span> <span class="toc-nav-text">读者-写者</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#哲学家就餐"><span class="toc-nav-number">1.3.3.2.3.</span> <span class="toc-nav-text">哲学家就餐</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#理发师"><span class="toc-nav-number">1.3.3.2.4.</span> <span class="toc-nav-text">理发师</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#信号量、PV操作"><span class="toc-nav-number">1.3.4.</span> <span class="toc-nav-text">信号量、PV操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#优缺点"><span class="toc-nav-number">1.3.4.1.</span> <span class="toc-nav-text">优缺点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实现汇合（Rendezvous）"><span class="toc-nav-number">1.3.4.2.</span> <span class="toc-nav-text">实现汇合（Rendezvous）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#屏障Barriers"><span class="toc-nav-number">1.3.4.3.</span> <span class="toc-nav-text">屏障Barriers</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#信号量集机制"><span class="toc-nav-number">1.3.4.4.</span> <span class="toc-nav-text">信号量集机制</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#管程的基本概念"><span class="toc-nav-number">1.3.5.</span> <span class="toc-nav-text">管程的基本概念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#死锁问题"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">死锁问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基本概念：死锁、活锁、饥饿"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">基本概念：死锁、活锁、饥饿</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#产生死锁的必要条件"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">产生死锁的必要条件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进程-资源图-资源分配图"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">进程-资源图&#x2F;资源分配图</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#处理死锁的方法"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">处理死锁的方法</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#输入-输出系统"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">输入&#x2F;输出系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#I-O设备及控制"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">I&#x2F;O设备及控制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#I-O设备"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">I&#x2F;O设备</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#I-O控制技术（比较异同）"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">I&#x2F;O控制技术（比较异同）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#I-O软件的组成与分层设计"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">I&#x2F;O软件的组成与分层设计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SPOOLing技术-假脱机技术"><span class="toc-nav-number">2.1.4.</span> <span class="toc-nav-text">SPOOLing技术&#x2F;假脱机技术</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#缓冲区的管理"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">缓冲区的管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#缓冲区作用"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">缓冲区作用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#单缓冲区"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">单缓冲区</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#双缓冲区"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">双缓冲区</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#环形缓冲区"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">环形缓冲区</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#缓冲池"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">缓冲池</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#I-O管理软件"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">I&#x2F;O管理软件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#磁盘存储管理"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">磁盘存储管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#磁盘的工作原理"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">磁盘的工作原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#磁盘空间的管理"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">磁盘空间的管理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#磁盘访问时间"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">磁盘访问时间</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#磁盘调度算法"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">磁盘调度算法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#先来先服务FCFS-1"><span class="toc-nav-number">3.4.1.</span> <span class="toc-nav-text">先来先服务FCFS</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#最短寻道时间优先SSTF"><span class="toc-nav-number">3.4.2.</span> <span class="toc-nav-text">最短寻道时间优先SSTF</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#扫描算法SCAN"><span class="toc-nav-number">3.4.3.</span> <span class="toc-nav-text">扫描算法SCAN</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#循环扫描算法C-SCAN"><span class="toc-nav-number">3.4.4.</span> <span class="toc-nav-text">循环扫描算法C-SCAN</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#提高I-O速度的主要途径"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">提高I&#x2F;O速度的主要途径</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#廉价冗余磁盘阵列-RAID"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">廉价冗余磁盘阵列: RAID</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优点"><span class="toc-nav-number">3.6.1.</span> <span class="toc-nav-text">优点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#RAID分级"><span class="toc-nav-number">3.6.2.</span> <span class="toc-nav-text">RAID分级</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#文件系统"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本概念"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">基本概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件的概念"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">文件的概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件的形式"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">文件的形式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#目录的概念"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">目录的概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件系统的功能"><span class="toc-nav-number">4.1.4.</span> <span class="toc-nav-text">文件系统的功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#目录的作用、内容、结构"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">目录的作用、内容、结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件系统实现技术"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">文件系统实现技术</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件控制块"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">文件控制块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件的逻辑结构：记录、流式"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">文件的逻辑结构：记录、流式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文件的物理结构"><span class="toc-nav-number">4.3.3.</span> <span class="toc-nav-text">文件的物理结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#连续文件"><span class="toc-nav-number">4.3.3.1.</span> <span class="toc-nav-text">连续文件</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#串联文件"><span class="toc-nav-number">4.3.3.2.</span> <span class="toc-nav-text">串联文件</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#索引文件：一级索引、多级索引"><span class="toc-nav-number">4.3.3.3.</span> <span class="toc-nav-text">索引文件：一级索引、多级索引</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件的共享、保护、保密"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">文件的共享、保护、保密</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#保护文件的方法"><span class="toc-nav-number">4.4.1.</span> <span class="toc-nav-text">保护文件的方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#性能问题"><span class="toc-nav-number">4.4.2.</span> <span class="toc-nav-text">性能问题</span></a></li></ol></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#review"
+              title="review"
+              >review</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
+
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/forestbookk">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/NONO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/NONO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/NONO">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; forestbookk 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
+                        <i>hexo-theme-snail</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://forestbookk.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🍀&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+</html>
