@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>mingw64&amp;&amp;gcc配置</title>
+      <link href="/2024/09/15/Tool-ming64-gcc%E9%85%8D%E7%BD%AE/"/>
+      <url>/2024/09/15/Tool-ming64-gcc%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>笔者操作系统为64位的Window11。先前用的是gcc7.3.0，由于编译要求，现需升级至gcc8.5.0以上。</p><h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>步骤仅两步：</p><ol><li>下载压缩包并压缩</li><li>配置环境变量</li></ol><h2 id="下载压缩包并解压"><a href="#下载压缩包并解压" class="headerlink" title="下载压缩包并解压"></a>下载压缩包并解压</h2><p><a href="https://github.com/niXman/mingw-builds-binaries/releases" target="_blank" rel="noopener">点击此处</a>，根据自身电脑配置选择下载<a href="https://github.com/niXman/mingw-builds-binaries/releases/download/13.2.0-rt_v11-rev1/x86_64-13.2.0-release-win32-seh-msvcrt-rt_v11-rev1.7z" target="_blank" rel="noopener">x86_64-13.2.0-release-win32-seh-msvcrt-rt_v11-rev1.7z</a>。</p><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>只需将解压好的mingw/bin的绝对路径复制，将路径Path中原有的mingw/bin路径替换。</p><p>通过</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -v</span><br></pre></td></tr></table></figure><p>即可观察到版本升级成功</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://blog.csdn.net/m0_52559040/article/details/131603782" target="_blank" rel="noopener">Windows mingw64 最简易 安装配置</a></p><p><a href="https://blog.csdn.net/weixin_46416035/article/details/127387170" target="_blank" rel="noopener">在windows11上安装最新版的gcc/g++（MinGW）—gcc version 12.2.0</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Tool </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>H5C3-CSS中级</title>
       <link href="/2024/09/10/H5C3-CSS%E4%B8%AD%E7%BA%A7/"/>
       <url>/2024/09/10/H5C3-CSS%E4%B8%AD%E7%BA%A7/</url>
